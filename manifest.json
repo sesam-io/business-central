@@ -1,0 +1,22 @@
+{
+  "additional_parameters": {
+    "account_id": {},
+    "token_url": {}
+  },
+  "auth": "oauth2",
+  "datatypes": {
+    "company": {
+      "label": "Company",
+      "template": "templates/company.json"
+    }
+  },
+  "oauth2": {
+    "login_url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+    "token_url": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+    "scopes": [
+      "https://api.businesscentral.dynamics.com/API.ReadWrite.All",
+      "https://api.businesscentral.dynamics.com/Automation.ReadWrite.All"
+    ]
+  },
+  "system-template": "templates/system.json"
+}

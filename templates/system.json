@@ -1,0 +1,19 @@
+{
+  "_id": "{{@ system @}}",
+  "oauth2": {
+    "access_token": "$SECRET(oauth_access_token)",
+    "client_id": "$SECRET(oauth_client_id)",
+    "client_secret": "$SECRET(oauth_client_secret)",
+    "refresh_token": "$SECRET(oauth_refresh_token)",
+    "token_url": "{{@ token_url @}}"
+  },
+  "operations": {
+    "company-list": {
+      "url": "companies",
+      "method": "GET"
+    }
+  },
+  "type": "system:rest",
+  "url_pattern": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/v2.0/%s",
+  "verify_ssl": true
+}
