@@ -1,6 +1,5 @@
 {
   "additional_parameters": {
-    "account_id": {},
     "token_url": {}
   },
   "auth": "oauth2",
@@ -12,10 +11,11 @@
   },
   "oauth2": {
     "login_url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
-    "token_url": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
     "scopes": [
-      "Financials.ReadWrite.All"
-    ]
+      "Financials.ReadWrite.All",
+      "offline_access"
+    ],
+    "token_url": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
   },
   "system-template": "templates/system.json"
 }

@@ -1,12 +1,12 @@
-[
-  {
-    "_id": "{{@ system @}}-{{@ datatype @}}-all",
-    "namespaced_identifiers": false,
-    "source": {
-      "operation": "{{@ datatype @}}-list",
-      "system": "{{@ system @}}",
-      "type": "rest"
-    },
-    "type": "pipe"
-  }
-]
+{
+  "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+  "namespaced_identifiers": false,
+  "source": {
+    "id_expression": "{{ id }}",
+    "operation": "{{@ datatype @}}-list",
+    "payload_property": "value",
+    "system": "{{@ system @}}",
+    "type": "rest"
+  },
+  "type": "pipe"
+}

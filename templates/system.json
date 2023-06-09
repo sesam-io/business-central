@@ -9,11 +9,11 @@
   },
   "operations": {
     "company-list": {
-      "url": "companies",
-      "method": "GET"
+      "method": "GET",
+      "url": "companies"
     }
   },
   "type": "system:rest",
-  "url_pattern": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/v2.0/%s",
+  "url_pattern": "https://graph.microsoft.com/beta/financials/%s",
   "verify_ssl": true
 }
