@@ -28,12 +28,46 @@
     },
     {
       "operation": "{{@ datatype @}}-list",
+      "side_effects": false,
       "system": "{{@ system @}}",
       "trace": {
         "log_request_body_maxsize": 100000,
         "log_response_body_maxsize": 100000
       },
       "type": "rest"
+    },
+    {
+      "rules": {
+        "add-value-id": [
+          [
+            "copy",
+            "*"
+          ],
+          [
+            "add",
+            "_id",
+            "_S.id"
+          ]
+        ],
+        "default": [
+          [
+            "copy",
+            "*"
+          ],
+          [
+            "create",
+            [
+              "apply",
+              "add-value-id",
+              "_S.response.value"
+            ]
+          ],
+          [
+            "discard"
+          ]
+        ]
+      },
+      "type": "dtl"
     }
   ],
   "type": "pipe"
