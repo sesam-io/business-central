@@ -7,6 +7,22 @@
     "company": {
       "label": "Company",
       "template": "templates/company.json"
+    },
+    "currencies": {
+      "label": "Currencies",
+      "template": "templates/customers.json"
+    },
+    "customers": {
+      "label": "Customers",
+      "template": "templates/customers.json"
+    },
+    "employees": {
+      "label": "Employees",
+      "template": "templates/customers.json"
+    },
+    "vendors": {
+      "label": "Vendors",
+      "template": "templates/customers.json"
     }
   },
   "oauth2": {

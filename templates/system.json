@@ -11,6 +11,22 @@
     "company-list": {
       "method": "GET",
       "url": "companies"
+    },
+    "currencies-list": {
+      "method": "GET",
+      "url": "companies/{{ properties.company_id }}/currencies"
+    },
+    "customers-list": {
+      "method": "GET",
+      "url": "companies/{{ properties.company_id }}/customers"
+    },
+    "employees-list": {
+      "method": "GET",
+      "url": "companies/{{ properties.company_id }}/employees"
+    },
+    "vendors-list": {
+      "method": "GET",
+      "url": "companies/{{ properties.company_id }}/vendors"
     }
   },
   "type": "system:rest",
