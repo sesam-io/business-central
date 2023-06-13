@@ -14,83 +14,83 @@
     },
     "currencies-delete": {
       "method": "DELETE",
-      "url": "companies/{{ properties.company_id }}/currencies/{{ entity.id }}"
+      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
     },
     "currencies-insert": {
       "method": "POST",
-      "url": "companies/{{ properties.company_id }}/currencies/{{ entity.id }}"
+      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
     },
     "currencies-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/currencies"
+      "url": "companies/{{@ account_id @}}/currencies"
     },
     "currencies-lookup": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/currencies/{{ entity.id }}"
+      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
     },
     "currencies-update": {
       "method": "POST",
-      "url": "companies/{{ properties.company_id }}/currencies/{{ entity.id }}"
+      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
     },
     "customers-delete": {
       "method": "DELETE",
-      "url": "companies/{{ entity['$source']['company_id'] }}/customers/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
     },
     "customers-insert": {
       "method": "POST",
-      "url": "companies/{{ entity['$source']['company_id'] }}/customers/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
     },
     "customers-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/customers"
+      "url": "companies/{{@ account_id @}}/customers"
     },
     "customers-lookup": {
       "method": "GET",
-      "url": "companies/{{ entity['$source']['company_id'] }}/customers/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
     },
     "customers-update": {
       "method": "POST",
-      "url": "companies/{{ entity['$source']['company_id'] }}/customers/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
     },
     "employees-delete": {
       "method": "DELETE",
-      "url": "companies/{{ entity['$source']['company_id'] }}/employees/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
     },
     "employees-insert": {
       "method": "POST",
-      "url": "companies/{{ entity['$source']['company_id'] }}/employees/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
     },
     "employees-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/employees"
+      "url": "companies/{{@ account_id @}}/employees"
     },
     "employees-lookup": {
       "method": "GET",
-      "url": "companies/{{ entity['$source']['company_id'] }}/employees/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
     },
     "employees-update": {
       "method": "POST",
-      "url": "companies/{{ entity['$source']['company_id'] }}/employees/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
     },
     "vendors-delete": {
       "method": "DELETE",
-      "url": "companies/{{ entity['$source']['company_id'] }}/vendors/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
     },
     "vendors-insert": {
       "method": "POST",
-      "url": "companies/{{ entity['$source']['company_id'] }}/vendors/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
     },
     "vendors-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/vendors"
+      "url": "companies/{{@ account_id @}}/vendors"
     },
     "vendors-lookup": {
       "method": "GET",
-      "url": "companies/{{ entity['$source']['company_id'] }}/vendors/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
     },
     "vendors-update": {
       "method": "POST",
-      "url": "companies/{{ entity['$source']['company_id'] }}/vendors/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
     }
   },
   "type": "system:rest",
