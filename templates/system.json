@@ -91,6 +91,50 @@
     "vendors-update": {
       "method": "POST",
       "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
+    },
+    "salesorders-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/salesOrders"
+    },
+    "salesorders-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
+    },
+    "salesorders-update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
+    },
+    "salesorders-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
+    },
+    "salesorders-insert": {
+      "method": "POST",
+      "payload-type": "json",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
+    },
+    "salesorderlines-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ properties.salesorder_id }}/salesOrderLines"
+    },
+    "salesorderlines-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
+    },
+    "salesorderlines-update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
+    },
+    "salesorderlines-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
+    },
+    "salesorderlines-insert": {
+      "method": "POST",
+      "payload-type": "json",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
     }
   },
   "type": "system:rest",

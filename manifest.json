@@ -1,6 +1,7 @@
 {
   "additional_parameters": {
-    "token_url": {}
+    "token_url": {},
+    "account_id": {}
   },
   "auth": "oauth2",
   "datatypes": {
@@ -23,6 +24,14 @@
     "vendors": {
       "label": "Vendors",
       "template": "templates/customers.json"
+    },
+    "salesorders": {
+      "label": "SalesOrders",
+      "template": "templates/customers.json"
+    },
+    "salesorderlines": {
+      "label": "SalesOrderLines",
+      "template": "templates/salesorderlines.json"
     }
   },
   "oauth2": {
