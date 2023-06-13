@@ -9,41 +9,6 @@
       "system": "{{@ system @}}",
       "type": "rest"
     },
-    "transform": [
-      {
-        "rules": {
-          "add-value-id": [
-            [
-              "copy",
-              "*"
-            ],
-            [
-              "add",
-              "_id",
-              "_S.id"
-            ]
-          ],
-          "default": [
-            [
-              "copy",
-              "*"
-            ],
-            [
-              "create",
-              [
-                "apply",
-                "add-value-id",
-                "_S.response.value"
-              ]
-            ],
-            [
-              "discard"
-            ]
-          ]
-        },
-        "type": "dtl"
-      }
-    ],
     "type": "pipe"
   },
   {
