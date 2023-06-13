@@ -9,6 +9,26 @@
       "system": "{{@ system @}}",
       "type": "rest"
     },
+    "transform": {
+      "rules": {
+        "default": [
+          [
+            "copy",
+            "*"
+          ],
+          [
+            "add",
+            "$last-modified",
+            [
+              "datetime-parse",
+              "%Y-%m-%dT%H:%M:%S.%fZ",
+              "_S.lastModifiedDateTime"
+            ]
+          ]
+        ]
+      },
+      "type": "dtl"
+    },
     "type": "pipe"
   },
   {
