@@ -25,6 +25,14 @@
       "label": "Vendors",
       "template": "templates/customers.json"
     },
+    "paymentterms": {
+      "label": "Paymentterms",
+      "template": "templates/customers.json"
+    },
+    "paymentmethods": {
+      "label": "Paymentmethods",
+      "template": "templates/customers.json"
+    },
     "dimensions": {
       "label": "Dimensions",
       "template": "templates/customers.json"
