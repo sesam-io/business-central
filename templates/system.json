@@ -127,6 +127,52 @@
       },
       "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
     },
+    "paymentterms-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/paymentterms/{{ entity['$source']['id'] }}"
+    },
+    "paymentterms-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/paymentterms"
+    },
+    "paymentterms-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentterms"
+    },
+    "paymentterms-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentterms/{{ entity['$source']['id'] }}"
+    },
+    "paymentterms-update": {
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
+    "paymentmethods-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
+    "paymentmethods-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/paymentmethods"
+    },
+    "paymentmethods-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentmethods"
+    },
+    "paymentmethods-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
+    "paymentmethods-update": {
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
     "itemcategories-delete": {
       "method": "DELETE",
       "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
