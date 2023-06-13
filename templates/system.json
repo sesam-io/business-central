@@ -12,21 +12,85 @@
       "method": "GET",
       "url": "companies"
     },
+    "currencies-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
+    },
+    "currencies-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
+    },
     "currencies-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/currencies"
+      "url": "companies/{{@ account_id @}}/currencies"
+    },
+    "currencies-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
+    },
+    "currencies-update": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
+    },
+    "customers-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
+    },
+    "customers-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "customers-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/customers"
+      "url": "companies/{{@ account_id @}}/customers"
+    },
+    "customers-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
+    },
+    "customers-update": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
+    },
+    "employees-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
+    },
+    "employees-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
     "employees-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/employees"
+      "url": "companies/{{@ account_id @}}/employees"
+    },
+    "employees-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
+    },
+    "employees-update": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
+    },
+    "vendors-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
+    },
+    "vendors-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     },
     "vendors-list": {
       "method": "GET",
-      "url": "companies/{{ properties.company_id }}/vendors"
+      "url": "companies/{{@ account_id @}}/vendors"
+    },
+    "vendors-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
+    },
+    "vendors-update": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     }
   },
   "type": "system:rest",
