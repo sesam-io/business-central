@@ -25,6 +25,26 @@
       "label": "Vendors",
       "template": "templates/customers.json"
     },
+    "dimensions": {
+      "label": "Dimensions",
+      "template": "templates/customers.json"
+    },
+    "countriesregions": {
+      "label": "Countriesregions",
+      "template": "templates/customers.json"
+    },
+    "items": {
+      "label": "Items",
+      "template": "templates/customers.json"
+    },
+    "itemcategories": {
+      "label": "Itemcategories",
+      "template": "templates/customers.json"
+    },
+    "dimensionvalues": {
+      "label": "Dimensionvalues",
+      "template": "templates/customers.json"
+    },
     "salesorders": {
       "label": "SalesOrders",
       "template": "templates/customers.json"

@@ -18,7 +18,7 @@
     },
     "currencies-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/currencies"
     },
     "currencies-list": {
       "method": "GET",
@@ -29,7 +29,10 @@
       "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "currencies-update": {
-      "method": "POST",
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
       "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "customers-delete": {
@@ -38,7 +41,7 @@
     },
     "customers-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/customers"
     },
     "customers-list": {
       "method": "GET",
@@ -49,7 +52,10 @@
       "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "customers-update": {
-      "method": "POST",
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
       "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "employees-delete": {
@@ -58,7 +64,7 @@
     },
     "employees-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/employees"
     },
     "employees-list": {
       "method": "GET",
@@ -69,7 +75,10 @@
       "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
     "employees-update": {
-      "method": "POST",
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
       "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
     "vendors-delete": {
@@ -78,7 +87,7 @@
     },
     "vendors-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/vendors"
     },
     "vendors-list": {
       "method": "GET",
@@ -89,8 +98,126 @@
       "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     },
     "vendors-update": {
-      "method": "POST",
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
       "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
+    },
+    "items-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
+    },
+    "items-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/items"
+    },
+    "items-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/items"
+    },
+    "items-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
+    },
+    "items-update": {
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
+    },
+    "itemcategories-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
+    },
+    "itemcategories-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/itemcategories"
+    },
+    "itemcategories-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/itemcategories"
+    },
+    "itemcategories-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
+    },
+    "itemcategories-update": {
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
+    },
+    "dimensions-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/dimensions/{{ entity['$source']['id'] }}"
+    },
+    "dimensions-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/dimensions"
+    },
+    "dimensions-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/dimensions"
+    },
+    "dimensions-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/dimensions/{{ entity['$source']['id'] }}"
+    },
+    "dimensions-update": {
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "url": "companies/{{@ account_id @}}/dimensions/{{ entity['$source']['id'] }}"
+    },
+    "dimensionvalues-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/dimensionvalues/{{ entity['$source']['id'] }}"
+    },
+    "dimensionvalues-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/dimensionvalues"
+    },
+    "dimensionvalues-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/dimensionvalues"
+    },
+    "dimensionvalues-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/dimensionvalues/{{ entity['$source']['id'] }}"
+    },
+    "dimensionvalues-update": {
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "url": "companies/{{@ account_id @}}/dimensionvalues/{{ entity['$source']['id'] }}"
+    },
+    "countriesregions-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
+    },
+    "countriesregions-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/countriesregions"
+    },
+    "countriesregions-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/countriesregions"
+    },
+    "countriesregions-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
+    },
+    "countriesregions-update": {
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
     },
     "salesorders-list": {
       "method": "GET",
@@ -101,7 +228,10 @@
       "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
     },
     "salesorders-update": {
-      "method": "PUT",
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
       "payload-type": "json",
       "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
     },
@@ -112,7 +242,7 @@
     "salesorders-insert": {
       "method": "POST",
       "payload-type": "json",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/salesOrders"
     },
     "salesorderlines-list": {
       "method": "GET",
@@ -123,7 +253,10 @@
       "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
     },
     "salesorderlines-update": {
-      "method": "PUT",
+      "method": "PATCH",
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
       "payload-type": "json",
       "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
     },
@@ -134,7 +267,7 @@
     "salesorderlines-insert": {
       "method": "POST",
       "payload-type": "json",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines"
     }
   },
   "type": "system:rest",
