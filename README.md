@@ -14,4 +14,4 @@ How to obtain an "account_id"
 
 Most of the pipes in this connector need an "account_id" which is really a "CompanyID" from the "companies" pipe.
 To get it, do a `sesam upload` (possibly twice) and then run the "xxxxxx-companies-collect" pipe and copy the "id" 
-from the only entity  it produces. Enter this as "account_id" in .expanded/test-env.json.
+from the only entity  it produces. Enter this as "account_id" in .authconfig.
