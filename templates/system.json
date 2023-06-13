@@ -14,11 +14,11 @@
     },
     "currencies-delete": {
       "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "currencies-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "currencies-list": {
       "method": "GET",
@@ -26,19 +26,19 @@
     },
     "currencies-lookup": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "currencies-update": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/currencies/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "customers-delete": {
       "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "customers-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "customers-list": {
       "method": "GET",
@@ -46,19 +46,19 @@
     },
     "customers-lookup": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "customers-update": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/customers/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "employees-delete": {
       "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
     "employees-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
     "employees-list": {
       "method": "GET",
@@ -66,19 +66,19 @@
     },
     "employees-lookup": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
     "employees-update": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/employees/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
     "vendors-delete": {
       "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     },
     "vendors-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     },
     "vendors-list": {
       "method": "GET",
@@ -86,11 +86,11 @@
     },
     "vendors-lookup": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     },
     "vendors-update": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/vendors/{{@ account_id @}}"
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     }
   },
   "type": "system:rest",
