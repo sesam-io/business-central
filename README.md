@@ -18,6 +18,10 @@ from the only entity  it produces. Enter this as "account_id" in .authconfig.
 
 
 # Datatypes
+## Company
+Read-only, represents the tenant. Contains company ID which is required for fetching other datatypes.
+
+
 ## Currencies
 Minimal object:
 ```
@@ -35,6 +39,21 @@ Minimal object:
   "displayName": "Some customer"
 }
 ```
+
+## Countriesregions
+Minimal object:
+```
+{
+  "code": "EB"
+}
+```
+
+## Dimensions
+Does not support updates or inserts.
+
+## Dimensionvalues
+Does not support updates or inserts.
+
 
 ## Employee
 Minimal object:
@@ -128,6 +147,7 @@ Minimal object:
   }
 ```
 
+## Salesorderlines
 Update:
 ```
   "$based_on_properties": [
