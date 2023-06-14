@@ -1,13 +1,17 @@
 {
   "additional_parameters": {
-    "token_url": {},
-    "account_id": {}
+    "account_id": {},
+    "token_url": {}
   },
   "auth": "oauth2",
   "datatypes": {
     "company": {
       "label": "Company",
       "template": "templates/company.json"
+    },
+    "countriesregions": {
+      "label": "Countriesregions",
+      "template": "templates/customers.json"
     },
     "currencies": {
       "label": "Currencies",
@@ -17,49 +21,45 @@
       "label": "Customers",
       "template": "templates/customers.json"
     },
-    "employees": {
-      "label": "Employees",
-      "template": "templates/customers.json"
-    },
-    "vendors": {
-      "label": "Vendors",
-      "template": "templates/customers.json"
-    },
-    "paymentterms": {
-      "label": "Paymentterms",
-      "template": "templates/customers.json"
-    },
-    "paymentmethods": {
-      "label": "Paymentmethods",
-      "template": "templates/customers.json"
-    },
     "dimensions": {
       "label": "Dimensions",
-      "template": "templates/customers.json"
-    },
-    "countriesregions": {
-      "label": "Countriesregions",
-      "template": "templates/customers.json"
-    },
-    "items": {
-      "label": "Items",
-      "template": "templates/customers.json"
-    },
-    "itemcategories": {
-      "label": "Itemcategories",
       "template": "templates/customers.json"
     },
     "dimensionvalues": {
       "label": "Dimensionvalues",
       "template": "templates/customers.json"
     },
-    "salesorders": {
-      "label": "SalesOrders",
+    "employees": {
+      "label": "Employees",
+      "template": "templates/customers.json"
+    },
+    "itemcategories": {
+      "label": "Itemcategories",
+      "template": "templates/customers.json"
+    },
+    "items": {
+      "label": "Items",
+      "template": "templates/customers.json"
+    },
+    "paymentmethods": {
+      "label": "Paymentmethods",
+      "template": "templates/customers.json"
+    },
+    "paymentterms": {
+      "label": "Paymentterms",
       "template": "templates/customers.json"
     },
     "salesorderlines": {
       "label": "SalesOrderLines",
       "template": "templates/salesorderlines.json"
+    },
+    "salesorders": {
+      "label": "SalesOrders",
+      "template": "templates/customers.json"
+    },
+    "vendors": {
+      "label": "Vendors",
+      "template": "templates/customers.json"
     }
   },
   "oauth2": {
