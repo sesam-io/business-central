@@ -87,6 +87,41 @@
     },
     "transform": [
       {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "$payload",
+              [
+                "apply",
+                "filter-payload",
+                "_S."
+              ]
+            ]
+          ],
+          "filter-payload": [
+            [
+              "copy",
+              "*",
+              [
+                "list",
+                "_*",
+                "$*"
+              ]
+            ],
+            [
+              "remove",
+              "documentId"
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
         "properties": {
           "operation_delete": "{{@ datatype @}}-delete",
           "operation_insert": "{{@ datatype @}}-insert",

@@ -12,6 +12,29 @@
       "method": "GET",
       "url": "companies"
     },
+    "countriesregions-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
+    },
+    "countriesregions-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/countriesregions"
+    },
+    "countriesregions-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/countriesregions"
+    },
+    "countriesregions-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
+    },
+    "countriesregions-update": {
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "method": "PATCH",
+      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
+    },
     "currencies-delete": {
       "method": "DELETE",
       "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
@@ -29,10 +52,10 @@
       "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "currencies-update": {
-      "method": "PATCH",
       "headers": {
         "If-Match": "{{ entity['$source']['@odata.etag'] }}"
       },
+      "method": "PATCH",
       "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
     },
     "customers-delete": {
@@ -52,149 +75,11 @@
       "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
     },
     "customers-update": {
-      "method": "PATCH",
       "headers": {
         "If-Match": "{{ entity['$source']['@odata.etag'] }}"
       },
+      "method": "PATCH",
       "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
-    },
-    "employees-delete": {
-      "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
-    },
-    "employees-insert": {
-      "method": "POST",
-      "url": "companies/{{@ account_id @}}/employees"
-    },
-    "employees-list": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/employees"
-    },
-    "employees-lookup": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
-    },
-    "employees-update": {
-      "method": "PATCH",
-      "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
-      },
-      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
-    },
-    "vendors-delete": {
-      "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
-    },
-    "vendors-insert": {
-      "method": "POST",
-      "url": "companies/{{@ account_id @}}/vendors"
-    },
-    "vendors-list": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/vendors"
-    },
-    "vendors-lookup": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
-    },
-    "vendors-update": {
-      "method": "PATCH",
-      "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
-      },
-      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
-    },
-    "items-delete": {
-      "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
-    },
-    "items-insert": {
-      "method": "POST",
-      "url": "companies/{{@ account_id @}}/items"
-    },
-    "items-list": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/items"
-    },
-    "items-lookup": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
-    },
-    "items-update": {
-      "method": "PATCH",
-      "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
-      },
-      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
-    },
-    "paymentterms-delete": {
-      "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/paymentterms/{{ entity['$source']['id'] }}"
-    },
-    "paymentterms-insert": {
-      "method": "POST",
-      "url": "companies/{{@ account_id @}}/paymentterms"
-    },
-    "paymentterms-list": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/paymentterms"
-    },
-    "paymentterms-lookup": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/paymentterms/{{ entity['$source']['id'] }}"
-    },
-    "paymentterms-update": {
-      "method": "PATCH",
-      "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
-      },
-      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
-    },
-    "paymentmethods-delete": {
-      "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
-    },
-    "paymentmethods-insert": {
-      "method": "POST",
-      "url": "companies/{{@ account_id @}}/paymentmethods"
-    },
-    "paymentmethods-list": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/paymentmethods"
-    },
-    "paymentmethods-lookup": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
-    },
-    "paymentmethods-update": {
-      "method": "PATCH",
-      "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
-      },
-      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
-    },
-    "itemcategories-delete": {
-      "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
-    },
-    "itemcategories-insert": {
-      "method": "POST",
-      "url": "companies/{{@ account_id @}}/itemcategories"
-    },
-    "itemcategories-list": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/itemcategories"
-    },
-    "itemcategories-lookup": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
-    },
-    "itemcategories-update": {
-      "method": "PATCH",
-      "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
-      },
-      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
     },
     "dimensions-delete": {
       "method": "DELETE",
@@ -213,10 +98,10 @@
       "url": "companies/{{@ account_id @}}/dimensions/{{ entity['$source']['id'] }}"
     },
     "dimensions-update": {
-      "method": "PATCH",
       "headers": {
         "If-Match": "{{ entity['$source']['@odata.etag'] }}"
       },
+      "method": "PATCH",
       "url": "companies/{{@ account_id @}}/dimensions/{{ entity['$source']['id'] }}"
     },
     "dimensionvalues-delete": {
@@ -236,50 +121,151 @@
       "url": "companies/{{@ account_id @}}/dimensionvalues/{{ entity['$source']['id'] }}"
     },
     "dimensionvalues-update": {
-      "method": "PATCH",
       "headers": {
         "If-Match": "{{ entity['$source']['@odata.etag'] }}"
       },
+      "method": "PATCH",
       "url": "companies/{{@ account_id @}}/dimensionvalues/{{ entity['$source']['id'] }}"
     },
-    "countriesregions-delete": {
+    "employees-delete": {
       "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
-    "countriesregions-insert": {
+    "employees-insert": {
       "method": "POST",
-      "url": "companies/{{@ account_id @}}/countriesregions"
+      "url": "companies/{{@ account_id @}}/employees"
     },
-    "countriesregions-list": {
+    "employees-list": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/countriesregions"
+      "url": "companies/{{@ account_id @}}/employees"
     },
-    "countriesregions-lookup": {
+    "employees-lookup": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
     },
-    "countriesregions-update": {
-      "method": "PATCH",
+    "employees-update": {
       "headers": {
         "If-Match": "{{ entity['$source']['@odata.etag'] }}"
       },
-      "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
-    },
-    "salesorders-list": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/salesOrders"
-    },
-    "salesorders-lookup": {
-      "method": "GET",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
-    },
-    "salesorders-update": {
       "method": "PATCH",
+      "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
+    },
+    "itemcategories-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
+    },
+    "itemcategories-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/itemcategories"
+    },
+    "itemcategories-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/itemcategories"
+    },
+    "itemcategories-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
+    },
+    "itemcategories-update": {
       "headers": {
         "If-Match": "{{ entity['$source']['@odata.etag'] }}"
       },
+      "method": "PATCH",
+      "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
+    },
+    "items-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
+    },
+    "items-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/items"
+    },
+    "items-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/items"
+    },
+    "items-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
+    },
+    "items-update": {
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "method": "PATCH",
+      "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
+    },
+    "paymentmethods-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
+    "paymentmethods-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/paymentmethods"
+    },
+    "paymentmethods-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentmethods"
+    },
+    "paymentmethods-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
+    "paymentmethods-update": {
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "method": "PATCH",
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
+    "paymentterms-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/paymentterms/{{ entity['$source']['id'] }}"
+    },
+    "paymentterms-insert": {
+      "method": "POST",
+      "url": "companies/{{@ account_id @}}/paymentterms"
+    },
+    "paymentterms-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentterms"
+    },
+    "paymentterms-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/paymentterms/{{ entity['$source']['id'] }}"
+    },
+    "paymentterms-update": {
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "method": "PATCH",
+      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+    },
+    "salesorderlines-delete": {
+      "method": "DELETE",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['documentId'] }}/salesOrderLines/{{ entity['$source']['id'] }}"
+    },
+    "salesorderlines-insert": {
+      "method": "POST",
       "payload-type": "json",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['documentId'] }}/salesOrderLines"
+    },
+    "salesorderlines-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ properties.salesorder_id }}/salesOrderLines"
+    },
+    "salesorderlines-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['documentId'] }}/salesOrderLines/{{ entity['$source']['id'] }}"
+    },
+    "salesorderlines-update": {
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "method": "PATCH",
+      "payload-type": "json",
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['documentId'] }}/salesOrderLines/{{ entity['$source']['id'] }}"
     },
     "salesorders-delete": {
       "method": "DELETE",
@@ -290,30 +276,44 @@
       "payload-type": "json",
       "url": "companies/{{@ account_id @}}/salesOrders"
     },
-    "salesorderlines-list": {
+    "salesorders-list": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ properties.salesorder_id }}/salesOrderLines"
+      "url": "companies/{{@ account_id @}}/salesOrders"
     },
-    "salesorderlines-lookup": {
+    "salesorders-lookup": {
       "method": "GET",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
     },
-    "salesorderlines-update": {
-      "method": "PATCH",
+    "salesorders-update": {
       "headers": {
         "If-Match": "{{ entity['$source']['@odata.etag'] }}"
       },
+      "method": "PATCH",
       "payload-type": "json",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity['$source']['id'] }}"
     },
-    "salesorderlines-delete": {
+    "vendors-delete": {
       "method": "DELETE",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     },
-    "salesorderlines-insert": {
+    "vendors-insert": {
       "method": "POST",
-      "payload-type": "json",
-      "url": "companies/{{@ account_id @}}/salesOrders/{{ entity.documentId }}/salesOrderLines"
+      "url": "companies/{{@ account_id @}}/vendors"
+    },
+    "vendors-list": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/vendors"
+    },
+    "vendors-lookup": {
+      "method": "GET",
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
+    },
+    "vendors-update": {
+      "headers": {
+        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+      },
+      "method": "PATCH",
+      "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
     }
   },
   "type": "system:rest",

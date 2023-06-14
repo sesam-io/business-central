@@ -71,3 +71,39 @@ Minimal object:
 ```
 
 
+## Salesorders
+Minimal object:
+```
+  {
+    "customerNumber": "50000"
+  }
+```
+
+## Salesorderitems
+Minimal object:
+```
+  {
+    "itemId": "d66eb5d3-55e9-ed11-8850-6045bdc8c1cc",
+    "lineType": "Item"  
+  }
+```
+
+## Items
+Minial object:
+```
+  {
+    "displayName": "Test",
+    "itemCategoryId": "c46eb5d3-55e9-ed11-8850-6045bdc8c1cc",
+    "type": "Inventory"
+  }
+```
+
+## Itemcategories
+Minimal object:
+```
+  {
+    "code": "TEST",
+    "displayName": "Test"
+  }
+```
+
