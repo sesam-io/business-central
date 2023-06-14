@@ -23,6 +23,8 @@ Read-only, represents the tenant. Contains company ID which is required for fetc
 
 
 ## Currencies
+Insert:
+
 Minimal object:
 ```
 {
@@ -30,7 +32,8 @@ Minimal object:
 }
 ```
 
-Based on properties:
+Update:
+
 ```
   "$based_on_properties": [
     "amountDecimalPlaces",
@@ -46,6 +49,8 @@ Based on properties:
 ## Customers
 Note that ``displayName`` is not actually required by the API, but without a ``displayName`` it will not show up in the UI.
 
+Insert:
+
 Minimal object:
 ```
 {
@@ -53,7 +58,42 @@ Minimal object:
 }
 ```
 
+Update:
+```
+    "$based_on_properties": [
+        "type",
+        "blocked",
+        "currencyCode",
+        "currencyId",
+        "displayName",
+        "email",
+        "id",
+        "lastModifiedDateTime",
+        "number",
+        "paymentMethodId",
+        "paymentTermsId",
+        "shipmentMethodId",
+        "taxAreaDisplayName",
+        "taxAreaId",
+        "taxLiable",
+        "taxRegistrationNumber"
+       ],
+```
+
 ## Countriesregions
+Update:
+```
+    "$based_on_properties": [
+        "addressFormat",
+        "code",
+        "displayName",
+        "id",
+        "lastModifiedDateTime"
+       ]
+```
+
+Insert:
+
 Minimal object:
 ```
 {
