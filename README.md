@@ -49,7 +49,7 @@ Minimal object:
 Minimal object:
 ```
 {
-
+   "code": "3 DAGER"
 }
 ```
 
@@ -57,7 +57,8 @@ Minimal object:
 Minimal object:
 ```
 {
-
+  "code": "ACCOUNT",
+  "displayName": "Betaling",
 }
 ```
 
