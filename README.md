@@ -18,6 +18,18 @@ from the only entity  it produces. Enter this as "account_id" in .authconfig.
 
 
 # Datatypes
+## Currencies
+Minimal object:
+```
+{
+  "amountDecimalPlaces": "2:2",
+  "amountRoundingPrecision": 0.01,
+  "code": "TD",
+  "displayName": "Test dollar",
+  "symbol": "$"
+}
+```
+
 ## Employee
 Minimal object:
 ```
