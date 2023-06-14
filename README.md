@@ -109,12 +109,33 @@ Does not support updates or inserts.
 
 
 ## Employee
+Insert:
+
 Minimal object:
 ```
 {
   "givenName": "Ante",
   "surname": "Testson"
 }
+```
+
+Updated:
+```
+    "$based_on_properties": [
+      "birthDate",
+      "displayName",
+      "employmentDate",
+      "givenName",
+      "id",
+      "jobTitle",
+      "phoneNumber",
+      "mobilePhone",
+      "number",
+      "personalEmail",
+      "status",
+      "surname",
+      "terminationDate"
+    ]
 ```
 
 ## Paymentterms
