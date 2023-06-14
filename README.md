@@ -63,6 +63,8 @@ Minimal object:
 ```
 
 ## Vendors
+Insert:
+
 Minimal object:
 ```
 {
@@ -70,13 +72,66 @@ Minimal object:
 }
 ```
 
+Update:
+```
+    "$based_on_properties": [
+      "balance",
+      "blocked",
+      "currencyCode",
+      "currencyCode",
+      "currencyId",
+      "displayName",
+      "id",
+      "lastModifiedDateTime",
+      "number",
+      "paymentMethodId",
+      "paymentTermsId",
+      "taxLiable"
+    ]
+```
+
 
 ## Salesorders
+Insert:
+
 Minimal object:
 ```
   {
     "customerNumber": "50000"
   }
+```
+
+Update:
+```
+  "$based_on_properties": [
+    "billToCustomerId",
+    "billToCustomerNumber",
+    "billToName",
+    "currencyCode",
+    "currencyId",
+    "id",
+    "customerName",
+    "customerNumber",
+    "customerId",
+    "discountAmount",
+    "discountAppliedBeforeTax",
+    "email",
+    "externalDocumentNumber",
+    "fullyShipped",
+    "number",
+    "orderDate",
+    "partialShipping",
+    "paymentTermsId",
+    "pricesIncludeTax",
+    "requestedDeliveryDate",
+    "salesperson",
+    "shipToContact",
+    "shipToName",
+    "status",
+    "totalAmountExcludingTax",
+    "totalAmountIncludingTax",
+    "totalTaxAmount"
+  ]
 ```
 
 ## Salesorderitems
