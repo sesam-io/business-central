@@ -30,6 +30,19 @@ Minimal object:
 }
 ```
 
+Based on properties:
+```
+  "$based_on_properties": [
+    "amountDecimalPlaces",
+    "amountRoundingPrecision",
+    "code",
+    "displayName",
+    "symbol",
+    "lastModifiedDateTime",
+    "id"
+  ],
+```
+
 ## Customers
 Note that ``displayName`` is not actually required by the API, but without a ``displayName`` it will not show up in the UI.
 
@@ -147,7 +160,7 @@ Minimal object:
   }
 ```
 
-## Salesorderlines
+
 Update:
 ```
   "$based_on_properties": [
