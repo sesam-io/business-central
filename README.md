@@ -15,3 +15,23 @@ How to obtain an "account_id"
 Most of the pipes in this connector need an "account_id" which is really a "CompanyID" from the "companies" pipe.
 To get it, do a `sesam upload` (possibly twice) and then run the "xxxxxx-companies-collect" pipe and copy the "id" 
 from the only entity  it produces. Enter this as "account_id" in .authconfig.
+
+
+# Datatypes
+## Employee
+Minimal object:
+```
+{
+  "addressLine1": "677 Fifth Avenue",
+  "birthDate": "1973-12-12",
+  "employmentDate": "2001-06-01",
+  "givenName": "Annette",
+  "jobTitle": "Secretary",
+  "mobilePhone": "4564-4564-7831",
+  "number": "AH",
+  "personalEmail": "ah@contoso.com",
+  "phoneNumber": "4465-4899-4643",
+  "status": "Active",
+  "surname": "Hill"
+}
+```
