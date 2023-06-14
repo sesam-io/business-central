@@ -46,6 +46,8 @@ Minimal object:
 ```
 
 ## Paymentterms
+Insert:
+
 Minimal object:
 ```
 {
@@ -53,13 +55,38 @@ Minimal object:
 }
 ```
 
+Update:
+```
+    "$based_on_properties": [
+      "calculateDiscountOnCreditMemos",
+      "code",
+      "discountPercent",
+      "displayName",
+      "dueDateCalculation",
+      "id",
+      "lastModifiedDateTime"
+    ]
+```
+
 ## Paymentmethods
+Insert:
+
 Minimal object:
 ```
 {
   "code": "ACCOUNT",
   "displayName": "Betaling",
 }
+```
+
+Update:
+```
+    "$based_on_properties": [
+      "code",
+      "displayName",
+      "id",
+      "lastModifiedDateTime"
+    ]
 ```
 
 ## Vendors
@@ -134,7 +161,9 @@ Update:
   ]
 ```
 
-## Salesorderitems
+## Salesorderlines
+Insert:
+
 Minimal object:
 ```
   {
@@ -143,8 +172,43 @@ Minimal object:
   }
 ```
 
+Update:
+```
+    "$based_on_properties": [
+      "description",
+      "accountId",
+      "amountExcludingTax",
+      "amountIncludingTax",
+      "discountAmount",
+      "discountAppliedBeforeTax",
+      "discountPercent",
+      "documentId",
+      "id",
+      "invoiceDiscountAllocation",
+      "invoiceQuantity",
+      "invoicedQuantity",
+      "itemId",
+      "lineType",
+      "netAmount",
+      "netAmountIncludingTax",
+      "netTaxAmount",
+      "quantity",
+      "sequence",
+      "shipQuantity",
+      "shipmentDate",
+      "shippedQuantity",
+      "taxCode",
+      "taxPercent",
+      "totalTaxAmount",
+      "unitOfMeasureId",
+      "unitPrice"
+    ]
+```
+
 ## Items
-Minial object:
+Insert:
+
+Minimal object:
 ```
   {
     "displayName": "Test",
@@ -153,7 +217,30 @@ Minial object:
   }
 ```
 
+Update:
+```
+    "$based_on_properties": [
+      "type",
+      "baseUnitOfMeasureId",
+      "blocked",
+      "displayName",
+      "id",
+      "inventory",
+      "itemCategoryCode",
+      "itemCategoryId",
+      "lastModifiedDateTime",
+      "number",
+      "priceIncludesTax",
+      "taxGroupId",
+      "unitCost",
+      "unitPrice"
+    ],
+```
+
 ## Itemcategories
+
+Insert:
+
 Minimal object:
 ```
   {
@@ -162,3 +249,12 @@ Minimal object:
   }
 ```
 
+Update:
+```
+    "$based_on_properties": [
+      "code",
+      "displayName",
+      "id",
+      "lastModifiedDateTime"
+    ]
+```

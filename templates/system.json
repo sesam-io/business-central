@@ -240,7 +240,7 @@
         "If-Match": "*"
       },
       "method": "PATCH",
-      "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
+      "url": "companies/{{@ account_id @}}/paymentterms/{{ entity['$source']['id'] }}"
     },
     "salesorderlines-delete": {
       "method": "DELETE",
