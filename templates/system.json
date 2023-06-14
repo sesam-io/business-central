@@ -30,7 +30,7 @@
     },
     "countriesregions-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/countriesregions/{{ entity['$source']['id'] }}"
@@ -53,7 +53,7 @@
     },
     "currencies-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/currencies/{{ entity['$source']['id'] }}"
@@ -76,7 +76,7 @@
     },
     "customers-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/customers/{{ entity['$source']['id'] }}"
@@ -99,7 +99,7 @@
     },
     "dimensions-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/dimensions/{{ entity['$source']['id'] }}"
@@ -122,7 +122,7 @@
     },
     "dimensionvalues-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/dimensionvalues/{{ entity['$source']['id'] }}"
@@ -145,7 +145,7 @@
     },
     "employees-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/employees/{{ entity['$source']['id'] }}"
@@ -168,7 +168,7 @@
     },
     "itemcategories-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/itemcategories/{{ entity['$source']['id'] }}"
@@ -191,7 +191,7 @@
     },
     "items-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/items/{{ entity['$source']['id'] }}"
@@ -214,7 +214,7 @@
     },
     "paymentmethods-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
@@ -237,7 +237,7 @@
     },
     "paymentterms-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/paymentmethods/{{ entity['$source']['id'] }}"
@@ -261,7 +261,7 @@
     },
     "salesorderlines-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "payload-type": "json",
@@ -286,7 +286,7 @@
     },
     "salesorders-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "payload-type": "json",
@@ -310,7 +310,7 @@
     },
     "vendors-update": {
       "headers": {
-        "If-Match": "{{ entity['$source']['@odata.etag'] }}"
+        "If-Match": "*"
       },
       "method": "PATCH",
       "url": "companies/{{@ account_id @}}/vendors/{{ entity['$source']['id'] }}"
