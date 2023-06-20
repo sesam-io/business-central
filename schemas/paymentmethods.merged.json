@@ -18,15 +18,19 @@
       "type": "string"
     },
     "code": {
+      "description": "The code of the payment method.",
       "type": "string"
     },
     "displayName": {
+      "description": "Specifies the payment method's name. This name will appear on all sales documents for the payment method.",
       "type": "string"
     },
     "id": {
+      "description": "The unique ID of the payment method. Non-editable.",
       "type": "string"
     },
     "lastModifiedDateTime": {
+      "description": "The last datetime the payment method was modified. Read-Only.",
       "type": "string"
     }
   },

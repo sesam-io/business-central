@@ -74,6 +74,7 @@
       "type": "string"
     },
     "unitCost": {
+      "description": "The unit cost of each individual item in the item.",
       "subtype": "decimal",
       "type": "string"
     },

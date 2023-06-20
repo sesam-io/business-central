@@ -12,20 +12,26 @@
     },
     "address": {
       "additionalProperties": true,
+      "description": "Specifies the employee's address. This address will appear on all resource documents for the employee.",
       "properties": {
         "city": {
+          "description": "Postal address city.",
           "type": "string"
         },
         "countryLetterCode": {
+          "description": "Postal address country letter code (two character word)",
           "type": "string"
         },
         "postalCode": {
+          "description": "Postal address post code",
           "type": "string"
         },
         "state": {
+          "description": "Postal address state.",
           "type": "string"
         },
         "street": {
+          "description": "Postal address street.",
           "type": "string"
         }
       },

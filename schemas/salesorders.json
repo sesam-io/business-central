@@ -19,19 +19,24 @@
       "additionalProperties": true,
       "properties": {
         "city": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address city."
         },
         "countryLetterCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address country letter code (two character word)"
         },
         "postalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address post code"
         },
         "state": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address state."
         },
         "street": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address street."
         }
       },
       "type": "object",
@@ -121,19 +126,24 @@
       "additionalProperties": true,
       "properties": {
         "city": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address city."
         },
         "countryLetterCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address country letter code (two character word)"
         },
         "postalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address post code"
         },
         "state": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address state."
         },
         "street": {
-          "type": "string"
+          "type": "string",
+          "description": "Postal address street."
         }
       },
       "type": "object",
@@ -152,23 +162,23 @@
       "properties": {
         "city": {
           "type": "string",
-          "description": ""
+          "description": "Postal address city."
         },
         "countryLetterCode": {
           "type": "string",
-          "description": ""
+          "description": "Postal address country letter code (two character word)"
         },
         "postalCode": {
           "type": "string",
-          "description": ""
+          "description": "Postal address post code"
         },
         "state": {
           "type": "string",
-          "description": ""
+          "description": "Postal address state."
         },
         "street": {
           "type": "string",
-          "description": ""
+          "description": "Postal address street."
         }
       },
       "type": "object",

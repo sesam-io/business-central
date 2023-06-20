@@ -12,27 +12,33 @@
     },
     "address": {
       "additionalProperties": true,
+      "description": "Specifies the customer's address. This address will appear on all sales documents for the customer.",
       "properties": {
         "city": {
+          "description": "Postal address city.",
           "type": "string"
         },
         "countryLetterCode": {
+          "description": "Postal address country letter code (two character word)",
           "type": "string"
         },
         "postalCode": {
+          "description": "Postal address post code",
           "type": "string"
         },
         "state": {
+          "description": "Postal address state.",
           "type": "string"
         },
         "street": {
+          "description": "Postal address street.",
           "type": "string"
         }
       },
       "type": "object"
     },
     "blocked": {
-      "description": "Specifies which transactions with the customer cannot be posted. It can be \" \", \"Ship\", \"Invoice\" or \"All\".",
+      "description": "Specifies which transactions with the customer cannot be posted. It can be ' ', 'Ship', 'Invoice' or 'All'.",
       "type": "string"
     },
     "currencyCode": {
@@ -96,7 +102,7 @@
       "type": "string"
     },
     "type": {
-      "description": "Specifies the type of customer, can be \"Company\" or \"Person\".",
+      "description": "Specifies the type of customer, can be 'Company' or 'Person'.",
       "type": "string"
     },
     "website": {
