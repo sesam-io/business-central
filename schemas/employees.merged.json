@@ -1,0 +1,88 @@
+{
+  "$id": "/api/pipes/xxxxxx-employees-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "address": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "countryLetterCode": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "birthDate": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "employmentDate": {
+      "type": "string"
+    },
+    "givenName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "mobilePhone": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "personalEmail": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "statisticsGroupCode": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "terminationDate": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-employees-collect",
+  "type": "object"
+}

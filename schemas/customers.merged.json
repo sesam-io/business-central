@@ -1,0 +1,91 @@
+{
+  "$id": "/api/pipes/xxxxxx-customers-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "address": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "countryLetterCode": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "blocked": {
+      "type": "string"
+    },
+    "currencyCode": {
+      "type": "string"
+    },
+    "currencyId": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "paymentMethodId": {
+      "type": "string"
+    },
+    "paymentTermsId": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "shipmentMethodId": {
+      "type": "string"
+    },
+    "taxAreaDisplayName": {
+      "type": "string"
+    },
+    "taxAreaId": {
+      "type": "string"
+    },
+    "taxLiable": {
+      "type": "boolean"
+    },
+    "taxRegistrationNumber": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-customers-collect",
+  "type": "object"
+}

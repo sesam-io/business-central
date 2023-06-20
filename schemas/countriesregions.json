@@ -1,0 +1,28 @@
+{
+  "$id": "/api/pipes/xxxxxx-countriesregions-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "addressFormat": {
+      "type": "string",
+      "description": "Specifies the format of the address that is displayed on external-facing documents. You link an address format to a country/region code so that external-facing documents based on cards or documents with that country/region code use the specified address format."
+    },
+    "code": {
+      "type": "string", "description": "The code of the country/region."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Specifies the country/region's name. This name will appear on all sales documents for the country/region."
+    },
+    "id": {
+      "type": "string",
+      "description": "The unique ID of the country/region. Non-editable."
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "description": "The last datetime the country/region was modified. Read-Only."
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-countriesregions-collect",
+  "type": "object"
+}

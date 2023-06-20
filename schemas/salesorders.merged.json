@@ -1,0 +1,182 @@
+{
+  "$id": "/api/pipes/xxxxxx-salesorders-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "billToCustomerId": {
+      "type": "string"
+    },
+    "billToCustomerNumber": {
+      "type": "string"
+    },
+    "billToName": {
+      "type": "string"
+    },
+    "billingPostalAddress": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "countryLetterCode": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "currencyCode": {
+      "type": "string"
+    },
+    "currencyId": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "customerNumber": {
+      "type": "string"
+    },
+    "discountAmount": {
+      "type": "integer"
+    },
+    "discountAppliedBeforeTax": {
+      "type": "boolean"
+    },
+    "email": {
+      "type": "string"
+    },
+    "externalDocumentNumber": {
+      "type": "string"
+    },
+    "fullyShipped": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "orderDate": {
+      "type": "string"
+    },
+    "partialShipping": {
+      "type": "boolean"
+    },
+    "paymentTermsId": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "pricesIncludeTax": {
+      "type": "boolean"
+    },
+    "requestedDeliveryDate": {
+      "type": "string"
+    },
+    "salesperson": {
+      "type": "string"
+    },
+    "sellingPostalAddress": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "countryLetterCode": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "shipToContact": {
+      "type": "string"
+    },
+    "shipToName": {
+      "type": "string"
+    },
+    "shippingPostalAddress": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "countryLetterCode": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "status": {
+      "type": "string"
+    },
+    "totalAmountExcludingTax": {
+      "type": "integer"
+    },
+    "totalAmountIncludingTax": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "totalTaxAmount": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-salesorders-collect",
+  "type": "object"
+}

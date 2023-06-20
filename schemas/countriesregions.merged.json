@@ -1,0 +1,38 @@
+{
+  "$id": "/api/pipes/xxxxxx-countriesregions-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "anyOf": [
+        {
+          "subtype": "nanoseconds",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "addressFormat": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-countriesregions-collect",
+  "type": "object"
+}

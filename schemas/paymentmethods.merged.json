@@ -1,0 +1,35 @@
+{
+  "$id": "/api/pipes/xxxxxx-paymentmethods-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "anyOf": [
+        {
+          "subtype": "nanoseconds",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-paymentmethods-collect",
+  "type": "object"
+}

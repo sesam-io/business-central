@@ -1,0 +1,125 @@
+{
+  "$id": "/api/pipes/xxxxxx-salesorderlines-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "@odata.etag": {
+      "type": "string"
+    },
+    "accountId": {
+      "type": "string"
+    },
+    "amountExcludingTax": {
+      "type": "integer"
+    },
+    "amountIncludingTax": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "discountAmount": {
+      "type": "integer"
+    },
+    "discountAppliedBeforeTax": {
+      "type": "boolean"
+    },
+    "discountPercent": {
+      "type": "integer"
+    },
+    "documentId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "invoiceDiscountAllocation": {
+      "type": "integer"
+    },
+    "invoiceQuantity": {
+      "type": "integer"
+    },
+    "invoicedQuantity": {
+      "type": "integer"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "lineType": {
+      "type": "string"
+    },
+    "netAmount": {
+      "type": "integer"
+    },
+    "netAmountIncludingTax": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "netTaxAmount": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "sequence": {
+      "type": "integer"
+    },
+    "shipQuantity": {
+      "type": "integer"
+    },
+    "shipmentDate": {
+      "type": "string"
+    },
+    "shippedQuantity": {
+      "type": "integer"
+    },
+    "taxCode": {
+      "type": "string"
+    },
+    "taxPercent": {
+      "type": "integer"
+    },
+    "totalTaxAmount": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "unitOfMeasureId": {
+      "type": "string"
+    },
+    "unitPrice": {
+      "type": "integer"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-salesorderlines-collect",
+  "type": "object"
+}

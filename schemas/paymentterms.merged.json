@@ -1,0 +1,40 @@
+{
+  "$id": "/api/pipes/xxxxxx-paymentterms-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "calculateDiscountOnCreditMemos": {
+      "type": "boolean"
+    },
+    "code": {
+      "type": "string"
+    },
+    "discountDateCalculation": {
+      "type": "string"
+    },
+    "discountPercent": {
+      "type": "integer"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "dueDateCalculation": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-paymentterms-collect",
+  "type": "object"
+}

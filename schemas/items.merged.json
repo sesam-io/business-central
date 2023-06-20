@@ -1,0 +1,79 @@
+{
+  "$id": "/api/pipes/xxxxxx-items-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "anyOf": [
+        {
+          "subtype": "nanoseconds",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "baseUnitOfMeasureId": {
+      "type": "string"
+    },
+    "blocked": {
+      "type": "boolean"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "gtin": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "inventory": {
+      "type": "integer"
+    },
+    "itemCategoryCode": {
+      "type": "string"
+    },
+    "itemCategoryId": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "priceIncludesTax": {
+      "type": "boolean"
+    },
+    "taxGroupCode": {
+      "type": "string"
+    },
+    "taxGroupId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "unitCost": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "unitPrice": {
+      "type": "integer"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-items-collect",
+  "type": "object"
+}

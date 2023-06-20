@@ -1,0 +1,28 @@
+{
+  "$id": "/api/pipes/xxxxxx-itemcategories-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-itemcategories-collect",
+  "type": "object"
+}
