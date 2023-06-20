@@ -63,7 +63,8 @@
       "anyOf": [
         {
           "subtype": "decimal",
-          "type": "string"
+          "type": "string",
+          "description": "The unit cost of each individual item in the item."
         },
         {
           "type": "integer"

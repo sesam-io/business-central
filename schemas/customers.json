@@ -22,11 +22,12 @@
           "type": "string"
         }
       },
-      "type": "object"
+      "type": "object",
+      "description": "Specifies the customer's address. This address will appear on all sales documents for the customer."
     },
     "blocked": {
       "type": "string",
-      "description": "Specifies which transactions with the customer cannot be posted. It can be \" \", \"Ship\", \"Invoice\" or \"All\"."
+      "description": "Specifies which transactions with the customer cannot be posted. It can be ' ', 'Ship', 'Invoice' or 'All'."
     },
     "currencyCode": {
       "type": "string",
@@ -90,7 +91,7 @@
     },
     "type": {
       "type": "string",
-      "description": "Specifies the type of customer, can be \"Company\" or \"Person\"."
+      "description": "Specifies the type of customer, can be 'Company' or 'Person'."
     },
     "website": {
       "type": "string",

@@ -11,7 +11,8 @@
       "anyOf": [
         {
           "subtype": "decimal",
-          "type": "string"
+          "type": "string",
+          "description": "Specifies the size of the interval to be used when rounding amounts for this currency."
         },
         {
           "type": "integer"

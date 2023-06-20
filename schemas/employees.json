@@ -22,7 +22,8 @@
           "type": "string"
         }
       },
-      "type": "object"
+      "type": "object",
+      "description": "Specifies the employee's address. This address will appear on all resource documents for the employee."
     },
     "birthDate": {
       "type": "string",
