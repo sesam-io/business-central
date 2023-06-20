@@ -11,15 +11,19 @@
       "type": "string"
     },
     "code": {
+      "description": "The code of the item category.",
       "type": "string"
     },
     "displayName": {
+      "description": "Specifies the item category's name. This name will appear on all sales documents for the item category.",
       "type": "string"
     },
     "id": {
+      "description": "The unique ID of the item category. Non-editable.",
       "type": "string"
     },
     "lastModifiedDateTime": {
+      "description": "The last datetime the item category was modified. Read-Only.",
       "type": "string"
     }
   },

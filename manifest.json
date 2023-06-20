@@ -1,4 +1,5 @@
 {
+  "system": "BusinessCentral",
   "additional_parameters": {
     "account_id": {},
     "token_url": {}

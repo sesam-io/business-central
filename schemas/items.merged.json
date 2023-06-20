@@ -18,59 +18,67 @@
       "type": "string"
     },
     "baseUnitOfMeasureId": {
+      "description": "Specifies the ID of the unit of measure.",
       "type": "string"
     },
     "blocked": {
+      "description": "Specifies that entries cannot be posted to the item. True indicates account is blocked and posting is not allowed.",
       "type": "boolean"
     },
     "displayName": {
+      "description": "Specifies the item's name. This name will appear on all sales documents for the item.",
       "type": "string"
     },
     "gtin": {
+      "description": "This is the Global Trade Item Number.",
       "type": "string"
     },
     "id": {
+      "description": "The unique ID of the item. Non-editable.",
       "type": "string"
     },
     "inventory": {
+      "description": "Specifies how many units, such as pieces, boxes, or cans, of the item are in inventory. Read-Only.",
       "type": "integer"
     },
     "itemCategoryCode": {
+      "description": "The code of the item category in the item.",
       "type": "string"
     },
     "itemCategoryId": {
+      "description": "The ID of the item category in the item.",
       "type": "string"
     },
     "lastModifiedDateTime": {
+      "description": "The last datetime the item was modified. Read-Only.",
       "type": "string"
     },
     "number": {
+      "description": "Specifies the number of the item.",
       "type": "string"
     },
     "priceIncludesTax": {
+      "description": "Specifies that the unitPrice includes tax. Set to true, if unitPrice includes tax.",
       "type": "boolean"
     },
     "taxGroupCode": {
+      "description": "A Tax Group represents a group of inventory items or resources that are subject to identical tax terms.",
       "type": "string"
     },
     "taxGroupId": {
+      "description": "Specifies the ID of the Tax Group for the item.",
       "type": "string"
     },
     "type": {
+      "description": "Specifies the type of the item. It can be 'Inventory', 'Service' or 'Non-Inventory'.",
       "type": "string"
     },
     "unitCost": {
-      "anyOf": [
-        {
-          "subtype": "decimal",
-          "type": "string"
-        },
-        {
-          "type": "integer"
-        }
-      ]
+      "subtype": "decimal",
+      "type": "string"
     },
     "unitPrice": {
+      "description": "Specifies the price for one unit of the item in the specified item.",
       "type": "integer"
     }
   },

@@ -82,7 +82,7 @@
     },
     "status": {
       "type": "string",
-      "description": "Specifies the status of the employee. It can be \"Active\", \"Inactive\" or \"Terminated\"."
+      "description": "Specifies the status of the employee. It can be 'Active', 'Inactive' or 'Terminated'."
     },
     "surname": {
       "type": "string",

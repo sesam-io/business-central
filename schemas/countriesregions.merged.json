@@ -18,18 +18,23 @@
       "type": "string"
     },
     "addressFormat": {
+      "description": "Specifies the format of the address that is displayed on external-facing documents. You link an address format to a country/region code so that external-facing documents based on cards or documents with that country/region code use the specified address format.",
       "type": "string"
     },
     "code": {
+      "description": "The code of the country/region.",
       "type": "string"
     },
     "displayName": {
+      "description": "Specifies the country/region's name. This name will appear on all sales documents for the country/region.",
       "type": "string"
     },
     "id": {
+      "description": "The unique ID of the country/region. Non-editable.",
       "type": "string"
     },
     "lastModifiedDateTime": {
+      "description": "The last datetime the country/region was modified. Read-Only.",
       "type": "string"
     }
   },

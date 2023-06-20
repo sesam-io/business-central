@@ -11,32 +11,31 @@
       "type": "string"
     },
     "amountDecimalPlaces": {
+      "description": "Specifies the number of decimal places the system will display on amounts for this currency.",
       "type": "string"
     },
     "amountRoundingPrecision": {
-      "anyOf": [
-        {
-          "subtype": "decimal",
-          "type": "string"
-        },
-        {
-          "type": "integer"
-        }
-      ]
+      "subtype": "decimal",
+      "type": "string"
     },
     "code": {
+      "description": "The code of the currency.",
       "type": "string"
     },
     "displayName": {
+      "description": "Specifies the currency's name. This name will appear on all sales documents for the currency.",
       "type": "string"
     },
     "id": {
+      "description": "The unique ID of the currency. Non-editable.",
       "type": "string"
     },
     "lastModifiedDateTime": {
+      "description": "The last datetime the currency was modified. Read-Only.",
       "type": "string"
     },
     "symbol": {
+      "description": "Specifies a graphical representation of the unit of measure.",
       "type": "string"
     }
   },

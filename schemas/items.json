@@ -57,7 +57,7 @@
     },
     "type": {
       "type": "string",
-      "description": "Specifies the type of the item. It can be \"Inventory\", \"Service\" or \"Non-Inventory\"."
+      "description": "Specifies the type of the item. It can be 'Inventory', 'Service' or 'Non-Inventory'."
     },
     "unitCost": {
       "anyOf": [
