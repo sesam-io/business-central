@@ -2,7 +2,79 @@
   "$id": "/api/pipes/xxxxxx-items-collect/entity-types/sink",
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
-  "properties": {},
+  "properties": {
+    "baseUnitOfMeasureId": {
+      "type": "string",
+      "description": "Specifies the ID of the unit of measure."
+    },
+    "blocked": {
+      "type": "boolean",
+      "description": "Specifies that entries cannot be posted to the item. True indicates account is blocked and posting is not allowed."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Specifies the item's name. This name will appear on all sales documents for the item."
+    },
+    "gtin": {
+      "type": "string",
+      "description": "This is the Global Trade Item Number."
+    },
+    "id": {
+      "type": "string",
+      "description": "The unique ID of the item. Non-editable."
+    },
+    "inventory": {
+      "type": "integer",
+      "description": "Specifies how many units, such as pieces, boxes, or cans, of the item are in inventory. Read-Only."
+    },
+    "itemCategoryCode": {
+      "type": "string",
+      "description": "The code of the item category in the item."
+    },
+    "itemCategoryId": {
+      "type": "string",
+      "description": "The ID of the item category in the item."
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "description": "The last datetime the item was modified. Read-Only."
+    },
+    "number": {
+      "type": "string",
+      "description": "Specifies the number of the item."
+    },
+    "priceIncludesTax": {
+      "type": "boolean",
+      "description": "Specifies that the unitPrice includes tax. Set to true, if unitPrice includes tax."
+    },
+    "taxGroupCode": {
+      "type": "string",
+      "description": "A Tax Group represents a group of inventory items or resources that are subject to identical tax terms."
+    },
+    "taxGroupId": {
+      "type": "string",
+      "description": "Specifies the ID of the Tax Group for the item."
+    },
+    "type": {
+      "type": "string",
+      "description": "Specifies the type of the item. It can be \"Inventory\", \"Service\" or \"Non-Inventory\"."
+    },
+    "unitCost": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "unitPrice": {
+      "type": "integer",
+      "description": "Specifies the price for one unit of the item in the specified item."
+    }
+  },
   "title": "Pipe sink entity type: xxxxxx-items-collect",
   "type": "object"
 }

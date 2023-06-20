@@ -8,7 +8,8 @@
       "description": "Specifies the format of the address that is displayed on external-facing documents. You link an address format to a country/region code so that external-facing documents based on cards or documents with that country/region code use the specified address format."
     },
     "code": {
-      "type": "string", "description": "The code of the country/region."
+      "type": "string",
+      "description": "The code of the country/region."
     },
     "displayName": {
       "type": "string",

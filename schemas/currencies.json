@@ -4,7 +4,8 @@
   "additionalProperties": true,
   "properties": { 
     "amountDecimalPlaces": {
-      "type": "string", "description": "Specifies the number of decimal places the system will display on amounts for this currency."
+      "type": "string",
+      "description": "Specifies the number of decimal places the system will display on amounts for this currency."
     },
     "amountRoundingPrecision": {
       "anyOf": [
@@ -26,7 +27,8 @@
       "description": "Specifies the currency's name. This name will appear on all sales documents for the currency."
     },
     "id": {
-      "type": "string"
+      "type": "string",
+      "description": "The unique ID of the currency. Non-editable."
     },
     "lastModifiedDateTime": {
       "type": "string",
