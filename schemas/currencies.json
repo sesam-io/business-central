@@ -1,0 +1,45 @@
+{
+  "$id": "/api/pipes/xxxxxx-currencies-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": { 
+    "amountDecimalPlaces": {
+      "type": "string",
+      "description": "Specifies the number of decimal places the system will display on amounts for this currency."
+    },
+    "amountRoundingPrecision": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string",
+          "description": "Specifies the size of the interval to be used when rounding amounts for this currency."
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "code": {
+      "type": "string",
+      "description": "The code of the currency."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Specifies the currency's name. This name will appear on all sales documents for the currency."
+    },
+    "id": {
+      "type": "string",
+      "description": "The unique ID of the currency. Non-editable."
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "description": "The last datetime the currency was modified. Read-Only."
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Specifies a graphical representation of the unit of measure."
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-currencies-collect",
+  "type": "object"
+}

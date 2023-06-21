@@ -1,0 +1,149 @@
+{
+  "$id": "/api/pipes/xxxxxx-salesorderlines-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "accountId": {
+      "type": "string",
+      "description": "The id of the account that the sales order line is related to."
+    },
+    "amountExcludingTax": {
+      "type": "integer",
+      "description": "The line amount excluding the tax. Read-Only."
+    },
+    "amountIncludingTax": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string",
+          "description": "The total amount for the line including tax. Read-Only."
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "Specifies the description of the sales order line."
+    },
+    "discountAmount": {
+      "type": "integer",
+      "description": "The sales order line discount amount."
+    },
+    "discountAppliedBeforeTax": {
+      "type": "boolean",
+      "description": "Specifies whether the discount is applied before tax."
+    },
+    "discountPercent": {
+      "type": "integer",
+      "description": "The line discount percent."
+    },
+    "documentId": {
+      "type": "string",
+      "description": "The ID of the parent sales order line."
+    },
+    "id": {
+      "type": "string",
+      "description": "The unique ID of the sales order line. Non-editable."
+    },
+    "invoiceDiscountAllocation": {
+      "type": "integer",
+      "description": "The sales order line discount allocation is the sales order line discount distributed on the total amount. Read-Only."
+    },
+    "invoiceQuantity": {
+      "type": "integer",
+      "description": "The quantity of items from the sales order line to be invoiced. Read-Only."
+    },
+    "invoicedQuantity": {
+      "type": "integer",
+      "description": " \tThe quantity of items from the sales order line that was invoiced."
+    },
+    "itemId": {
+      "type": "string",
+      "description": "The ID of the item in the sales order line."
+    },
+    "lineType": {
+      "type": "string",
+      "description": "The type of the sales order line. It can be 'Comment', 'Account', 'Item', 'Resource' Value', 'Fixed Asset' or 'Charge'."
+    },
+    "netAmount": {
+      "type": "integer",
+      "description": "The net amount is the amount including all discounts (taken from the sales order line). Read-Only."
+    },
+    "netAmountIncludingTax": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string",
+          "description": "The net amount including tax is the total net amount including tax. Read-Only."
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "netTaxAmount": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string",
+          "description": " \tThe net tax amount is the tax amount calculated from net amount. Read-Only."
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "quantity": {
+      "type": "integer",
+      "description": "The quantity of the item in the sales order line."
+    },
+    "sequence": {
+      "type": "integer",
+      "description": "The line sequence number."
+    },
+    "shipQuantity": {
+      "type": "integer",
+      "description": "The quantity of items from the order to be shipped."
+    },
+    "shipmentDate": {
+      "type": "string",
+      "description": "The date the item in the line is expected to ship."
+    },
+    "shippedQuantity": {
+      "type": "integer",
+      "description": "The quantity of items from the order already shipped. Read-Only."
+    },
+    "taxCode": {
+      "type": "string",
+      "description": "The tax code for the line."
+    },
+    "taxPercent": {
+      "type": "integer",
+      "description": "The tax percent for the line. Read-Only."
+    },
+    "totalTaxAmount": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string",
+          "description": "The total tax amount for the sales order line. Read-Only."
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "unitOfMeasureId": {
+      "type": "string",
+      "description": "The ID of unit of measure for the sales order line."
+    },
+    "unitPrice": {
+      "type": "integer",
+      "description": "Specifies the price for one unit of the item in the specified sales order line."
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-salesorderlines-collect",
+  "type": "object"
+}

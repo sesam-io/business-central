@@ -1,0 +1,39 @@
+{
+  "$id": "/api/pipes/xxxxxx-paymentmethods-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "anyOf": [
+        {
+          "subtype": "nanoseconds",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "code": {
+      "description": "The code of the payment method.",
+      "type": "string"
+    },
+    "displayName": {
+      "description": "Specifies the payment method's name. This name will appear on all sales documents for the payment method.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique ID of the payment method. Non-editable.",
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "description": "The last datetime the payment method was modified. Read-Only.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-paymentmethods-collect",
+  "type": "object"
+}

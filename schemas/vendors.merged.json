@@ -1,0 +1,104 @@
+{
+  "$id": "/api/pipes/xxxxxx-vendors-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "address": {
+      "additionalProperties": true,
+      "description": "The vendor's address.",
+      "properties": {
+        "city": {
+          "description": "Postal address city.",
+          "type": "string"
+        },
+        "countryLetterCode": {
+          "description": "Postal address country letter code (two character word)",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "Postal address post code",
+          "type": "string"
+        },
+        "state": {
+          "description": "Postal address state.",
+          "type": "string"
+        },
+        "street": {
+          "description": "Postal address street.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "balance": {
+      "description": "The vendor's balance. Read-Only.",
+      "subtype": "decimal",
+      "type": "string"
+    },
+    "blocked": {
+      "description": "Specifies which transactions with the vendor that cannot be posted. Accepted values are blank, Payment or All",
+      "type": "string"
+    },
+    "currencyCode": {
+      "description": "The default currency code for the vendor.",
+      "type": "string"
+    },
+    "currencyId": {
+      "description": "The default currency code ID for the vendor.",
+      "type": "string"
+    },
+    "displayName": {
+      "description": "The vendor's display name.",
+      "type": "string"
+    },
+    "email": {
+      "description": "The vendor's email address.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique ID of the vendor. Non-editable.",
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "description": "The last datetime the vendor was modified. Read-Only.",
+      "type": "string"
+    },
+    "number": {
+      "description": "The vendor number.",
+      "type": "string"
+    },
+    "paymentMethodId": {
+      "description": "The default payment method ID for the vendor.",
+      "type": "string"
+    },
+    "paymentTermsId": {
+      "description": "The default payment terms ID for the vendor.",
+      "type": "string"
+    },
+    "phoneNumber": {
+      "description": "The vendor's telephone number.",
+      "type": "string"
+    },
+    "taxLiable": {
+      "description": "Specifies if the vendor is liable for tax.",
+      "type": "boolean"
+    },
+    "taxRegistrationNumber": {
+      "description": "The vendor's tax registration number.",
+      "type": "string"
+    },
+    "website": {
+      "description": "The vendor's website address.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-vendors-collect",
+  "type": "object"
+}

@@ -1,0 +1,48 @@
+{
+  "$id": "/api/pipes/xxxxxx-paymentterms-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "calculateDiscountOnCreditMemos": {
+      "description": "Specifies if the discount should be applied to payment term. True indicates a discount will be given, false indicates a discount will not be given.",
+      "type": "boolean"
+    },
+    "code": {
+      "description": "The code of the payment term.",
+      "type": "string"
+    },
+    "discountDateCalculation": {
+      "description": "Specifies the formula that is used to calculate the date that a payment must be made in order to obtain a discount.",
+      "type": "string"
+    },
+    "discountPercent": {
+      "description": "The line discount percent.",
+      "type": "integer"
+    },
+    "displayName": {
+      "description": "Specifies the payment term's name. This name will appear on all sales documents for the payment term.",
+      "type": "string"
+    },
+    "dueDateCalculation": {
+      "description": "Specifies the formula that is used to calculate the date that a payment must be made.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique ID of the payment term. Non-editable.",
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "description": "The last datetime the payment term was modified. Read-Only.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-paymentterms-collect",
+  "type": "object"
+}

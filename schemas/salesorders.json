@@ -1,0 +1,222 @@
+{
+  "$id": "/api/pipes/xxxxxx-salesorders-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "billToCustomerId": {
+      "type": "string",
+      "description": "Bill to customer id."
+    },
+    "billToCustomerNumber": {
+      "type": "string",
+      "description": "Bill to customer number."
+    },
+    "billToName": {
+      "type": "string",
+      "description": "Bill to name."
+    },
+    "billingPostalAddress": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "Postal address city."
+        },
+        "countryLetterCode": {
+          "type": "string",
+          "description": "Postal address country letter code (two character word)"
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "Postal address post code"
+        },
+        "state": {
+          "type": "string",
+          "description": "Postal address state."
+        },
+        "street": {
+          "type": "string",
+          "description": "Postal address street."
+        }
+      },
+      "type": "object",
+      "description": "The billing postal address for the order."
+    },
+    "currencyCode": {
+      "type": "string",
+      "description": "The default currency code for the sales order."
+    },
+    "currencyId": {
+      "type": "string",
+      "description": "Specifies which currency the sales order uses."
+    },
+    "customerId": {
+      "type": "string",
+      "description": "The unique ID of customer."
+    },
+    "customerName": {
+      "type": "string",
+      "description": "The customer's name."
+    },
+    "customerNumber": {
+      "type": "string",
+      "description": "The customer's number."
+    },
+    "discountAmount": {
+      "type": "integer",
+      "description": "The sales order discount amount."
+    },
+    "discountAppliedBeforeTax": {
+      "type": "boolean",
+      "description": "Specifies whether the discount is applied before tax."
+    },
+    "email": {
+      "type": "string",
+      "description": "Specifies the sales order's email address."
+    },
+    "externalDocumentNumber": {
+      "type": "string",
+      "description": "Specifies an external document number for the sales order."
+    },
+    "fullyShipped": {
+      "type": "boolean",
+      "description": "Specifies whether the items of the sales order were fully shipped or not."
+    },
+    "id": {
+      "type": "string",
+      "description": "The unique ID of the sales order. Non-editable."
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "description": "The last datetime the sales order was modified. Read-Only."
+    },
+    "number": {
+      "type": "string",
+      "description": "Specifies the number of the sales order."
+    },
+    "orderDate": {
+      "type": "string",
+      "description": "The order date."
+    },
+    "partialShipping": {
+      "type": "boolean",
+      "description": "Specifies whether partial shipping of items is preferred or not."
+    },
+    "paymentTermsId": {
+      "type": "string",
+      "description": "Specifies which payment term the sales order uses."
+    },
+    "phoneNumber": {
+      "type": "string",
+      "description": "Specifies the sales order's telephone number."
+    },
+    "pricesIncludeTax": {
+      "type": "boolean",
+      "description": "Specifies whether the prices include Tax or not. Read-Only."
+    },
+    "requestedDeliveryDate": {
+      "type": "string",
+      "description": "The requested delivery date."
+    },
+    "salesperson": {
+      "type": "string",
+      "description": "The salesperson code for the sales order."
+    },
+    "sellingPostalAddress": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "Postal address city."
+        },
+        "countryLetterCode": {
+          "type": "string",
+          "description": "Postal address country letter code (two character word)"
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "Postal address post code"
+        },
+        "state": {
+          "type": "string",
+          "description": "Postal address state."
+        },
+        "street": {
+          "type": "string",
+          "description": "Postal address street."
+        }
+      },
+      "type": "object",
+      "description": "Selling postal address"
+    },
+    "shipToContact": {
+      "type": "string",
+      "description": "Ship to contact."
+    },
+    "shipToName": {
+      "type": "string",
+      "description": "Ship to name."
+    },
+    "shippingPostalAddress": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "Postal address city."
+        },
+        "countryLetterCode": {
+          "type": "string",
+          "description": "Postal address country letter code (two character word)"
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "Postal address post code"
+        },
+        "state": {
+          "type": "string",
+          "description": "Postal address state."
+        },
+        "street": {
+          "type": "string",
+          "description": "Postal address street."
+        }
+      },
+      "type": "object",
+      "description": "Shipping postal address"
+    },
+    "status": {
+      "type": "string",
+      "description": "Specifies the status of the sales order. It can be 'Draft', 'In Review' or 'Open'."
+    },
+    "totalAmountExcludingTax": {
+      "type": "integer",
+      "description": "The total amount excluding tax. Read-Only."
+    },
+    "totalAmountIncludingTax": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string",
+          "description": "The total amount including tax. Read-Only."
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "totalTaxAmount": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string",
+          "description": "The total tax amount for the sales order. Read-Only."
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-salesorders-collect",
+  "type": "object"
+}

@@ -1,0 +1,111 @@
+{
+  "$id": "/api/pipes/xxxxxx-employees-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "address": {
+      "additionalProperties": true,
+      "description": "Specifies the employee's address. This address will appear on all resource documents for the employee.",
+      "properties": {
+        "city": {
+          "description": "Postal address city.",
+          "type": "string"
+        },
+        "countryLetterCode": {
+          "description": "Postal address country letter code (two character word)",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "Postal address post code",
+          "type": "string"
+        },
+        "state": {
+          "description": "Postal address state.",
+          "type": "string"
+        },
+        "street": {
+          "description": "Postal address street.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "birthDate": {
+      "description": "Specifies the employee's date of birth.",
+      "type": "string"
+    },
+    "displayName": {
+      "description": "Specifies the employee's name. This name will appear on all sales documents for the employee.",
+      "type": "string"
+    },
+    "email": {
+      "description": "Specifies the employee's email address.",
+      "type": "string"
+    },
+    "employmentDate": {
+      "description": "Specifies the date when the employee began to work for the company.",
+      "type": "string"
+    },
+    "givenName": {
+      "description": "The given name of the employee.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique ID of the employee. Non-editable.",
+      "type": "string"
+    },
+    "jobTitle": {
+      "description": "The job title of the employee.",
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "description": "The last datetime the employee was modified. Read-Only.",
+      "type": "string"
+    },
+    "middleName": {
+      "description": "The middle name of the employee.",
+      "type": "string"
+    },
+    "mobilePhone": {
+      "description": "Specifies the employee's telephone number.",
+      "type": "string"
+    },
+    "number": {
+      "description": "Specifies the number of the employee.",
+      "type": "string"
+    },
+    "personalEmail": {
+      "description": "Specifies the employee's personal email address.",
+      "type": "string"
+    },
+    "phoneNumber": {
+      "description": "Specifies the employee's telephone number.",
+      "type": "string"
+    },
+    "statisticsGroupCode": {
+      "description": "The employee's statistics group code.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Specifies the status of the employee. It can be 'Active', 'Inactive' or 'Terminated'.",
+      "type": "string"
+    },
+    "surname": {
+      "description": "The surname of the employee.",
+      "type": "string"
+    },
+    "terminationDate": {
+      "description": "Specifies the date when the employee was terminated, due to retirement or dismissal, for example.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-employees-collect",
+  "type": "object"
+}

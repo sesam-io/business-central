@@ -1,0 +1,32 @@
+{
+  "$id": "/api/pipes/xxxxxx-dimensions-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "code": {
+      "description": "The code of the dimension.",
+      "type": "string"
+    },
+    "displayName": {
+      "description": "Specifies the dimension's name. This name will appear on all sales documents for the dimension.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique ID of the dimension. Non-editable.",
+      "type": "string"
+    },
+    "lastModifiedDateTime": {
+      "description": "The last datetime the dimension was modified. Read-Only.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-dimensions-collect",
+  "type": "object"
+}

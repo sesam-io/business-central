@@ -1,0 +1,29 @@
+{
+  "$id": "/api/pipes/xxxxxx-company-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "businessProfileId": {
+      "description": "Specifies the Business Profile ID linked to the company.",
+      "type": "string"
+    },
+    "displayName": {
+      "description": "Specifies the company's name. This name will appear on all sales documents for the company.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique ID of the company. Non-editable.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Represents the company's name.",
+      "type": "string"
+    },
+    "systemVersion": {
+      "description": "Specifies the internal version of the company.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-company-collect",
+  "type": "object"
+}
