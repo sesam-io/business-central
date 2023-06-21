@@ -38,9 +38,16 @@
       "type": "object"
     },
     "balance": {
-      "description": "The vendor's balance. Read-Only.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": "The vendor's balance. Read-Only.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "blocked": {
       "description": "Specifies which transactions with the vendor that cannot be posted. Accepted values are blank, Payment or All",

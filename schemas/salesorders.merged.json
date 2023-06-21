@@ -200,14 +200,28 @@
       "type": "integer"
     },
     "totalAmountIncludingTax": {
-      "description": "The total amount including tax. Read-Only.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": "The total amount including tax. Read-Only.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "totalTaxAmount": {
-      "description": "The total tax amount for the sales order. Read-Only.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": "The total tax amount for the sales order. Read-Only.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     }
   },
   "title": "Pipe sink entity type: xxxxxx-salesorders-collect",

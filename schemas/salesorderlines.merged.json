@@ -15,9 +15,16 @@
       "type": "integer"
     },
     "amountIncludingTax": {
-      "description": "The total amount for the line including tax. Read-Only.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": "The total amount for the line including tax. Read-Only.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "description": {
       "description": "Specifies the description of the sales order line.",
@@ -68,14 +75,28 @@
       "type": "integer"
     },
     "netAmountIncludingTax": {
-      "description": "The net amount including tax is the total net amount including tax. Read-Only.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": "The net amount including tax is the total net amount including tax. Read-Only.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "netTaxAmount": {
-      "description": " \tThe net tax amount is the tax amount calculated from net amount. Read-Only.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": " \tThe net tax amount is the tax amount calculated from net amount. Read-Only.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "quantity": {
       "description": "The quantity of the item in the sales order line.",
@@ -106,9 +127,16 @@
       "type": "integer"
     },
     "totalTaxAmount": {
-      "description": "The total tax amount for the sales order line. Read-Only.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": "The total tax amount for the sales order line. Read-Only.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "unitOfMeasureId": {
       "description": "The ID of unit of measure for the sales order line.",
