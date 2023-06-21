@@ -15,9 +15,16 @@
       "type": "string"
     },
     "amountRoundingPrecision": {
-      "description": "Specifies the size of the interval to be used when rounding amounts for this currency.",
-      "subtype": "decimal",
-      "type": "string"
+      "anyOf": [
+        {
+          "description": "Specifies the size of the interval to be used when rounding amounts for this currency.",
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "code": {
       "description": "The code of the currency.",
