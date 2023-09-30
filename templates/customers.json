@@ -13,26 +13,36 @@
       },
       "type": "rest"
     },
-    "transform": {
-      "rules": {
-        "default": [
-          [
-            "copy",
-            "*"
-          ],
-          [
-            "add",
-            "$last-modified",
+    "transform": [
+      {
+        "rules": {
+          "default": [
             [
-              "datetime-parse",
-              "%Y-%m-%dT%H:%M:%S.%fZ",
-              "_S.lastModifiedDateTime"
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "$last-modified",
+              [
+                "datetime-parse",
+                "%Y-%m-%dT%H:%M:%S.%fZ",
+                "_S.lastModifiedDateTime"
+              ]
             ]
           ]
-        ]
+        },
+        "type": "dtl"
       },
-      "type": "dtl"
-    },
+      {
+        "properties": {
+          "primary_key": "id",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-collect-rest",
+        "type": "template"
+      }
+    ],
     "type": "pipe"
   },
   {

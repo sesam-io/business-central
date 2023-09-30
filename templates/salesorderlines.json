@@ -69,6 +69,14 @@
           ]
         },
         "type": "dtl"
+      },
+      {
+        "properties": {
+          "primary_key": "id",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-collect-rest",
+        "type": "template"
       }
     ],
     "type": "pipe"
