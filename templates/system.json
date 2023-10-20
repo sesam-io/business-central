@@ -11,13 +11,32 @@
     "token_url": "{{@ token_url @}}"
   },
   "operations": {
-    "company-list": {
+    "companies-list": {
       "method": "GET",
       "url": "companies"
     },
-    "contact-list": {
+    "contacts-delete": {
+      "method": "DELETE",
+      "url": "companies({{@ account_id @}})/contacts({{ entity['$source']['id'] }})"
+    },
+    "contacts-insert": {
+      "method": "POST",
+      "url": "companies({{@ account_id @}})/contacts"
+    },
+    "contacts-list": {
       "method": "GET",
       "url": "companies({{@ account_id @}})/contacts"
+    },
+    "contacts-lookup": {
+      "method": "GET",
+      "url": "companies({{@ account_id @}})/contacts({{ entity['$source']['id'] }})"
+    },
+    "contacts-update": {
+      "headers": {
+        "If-Match": "*"
+      },
+      "method": "PATCH",
+      "url": "companies({{@ account_id @}})/contacts({{ entity['$source']['id'] }})"
     },
     "countriesregions-delete": {
       "method": "DELETE",

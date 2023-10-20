@@ -5,13 +5,13 @@
   },
   "auth": "oauth2",
   "datatypes": {
-    "company": {
-      "label": "Company",
-      "template": "templates/company.json"
+    "companies": {
+      "label": "Companies",
+      "template": "templates/companies.json"
     },
-    "contact": {
-      "label": "Contact",
-      "template": "templates/company.json"
+    "contacts": {
+      "label": "Contacts",
+      "template": "templates/customers.json"
     },
     "countriesregions": {
       "label": "Countries/Regions",
