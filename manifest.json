@@ -1,17 +1,20 @@
 {
-  "system": "BusinessCentral",
   "additional_parameters": {
     "account_id": {},
     "token_url": {}
   },
   "auth": "oauth2",
   "datatypes": {
-    "company": {
-      "label": "Company",
-      "template": "templates/company.json"
+    "companies": {
+      "label": "Companies",
+      "template": "templates/companies.json"
+    },
+    "contacts": {
+      "label": "Contacts",
+      "template": "templates/customers.json"
     },
     "countriesregions": {
-      "label": "Countriesregions",
+      "label": "Countries/Regions",
       "template": "templates/customers.json"
     },
     "currencies": {
@@ -27,7 +30,7 @@
       "template": "templates/customers.json"
     },
     "dimensionvalues": {
-      "label": "Dimensionvalues",
+      "label": "Dimension Values",
       "template": "templates/customers.json"
     },
     "employees": {
@@ -35,7 +38,7 @@
       "template": "templates/customers.json"
     },
     "itemcategories": {
-      "label": "Itemcategories",
+      "label": "Item Categories",
       "template": "templates/customers.json"
     },
     "items": {
@@ -43,19 +46,19 @@
       "template": "templates/customers.json"
     },
     "paymentmethods": {
-      "label": "Paymentmethods",
+      "label": "Payment Methods",
       "template": "templates/customers.json"
     },
     "paymentterms": {
-      "label": "Paymentterms",
+      "label": "Payment Terms",
       "template": "templates/customers.json"
     },
     "salesorderlines": {
-      "label": "SalesOrderLines",
+      "label": "Sales Order Lines",
       "template": "templates/salesorderlines.json"
     },
     "salesorders": {
-      "label": "SalesOrders",
+      "label": "Sales Orders",
       "template": "templates/customers.json"
     },
     "vendors": {
@@ -66,10 +69,11 @@
   "oauth2": {
     "login_url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
     "scopes": [
-      "Financials.ReadWrite.All",
-      "offline_access"
+      "offline_access",
+      "https://api.businesscentral.dynamics.com/.default"
     ],
     "token_url": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
   },
+  "system": "BusinessCentral",
   "system-template": "templates/system.json"
 }
