@@ -1,0 +1,61 @@
+{
+  "_id": "{{@ system @}}-contactsInformation-collect",
+  "namespaced_identifiers": false,
+  "pump": {
+    "rescan_cron_expression": "0 * * * ? "
+  },
+  "source": {
+    "dataset": "{{@ system @}}-{{@ parent @}}-all",
+    "type": "dataset"
+  },
+  "transform": [
+    {
+      "rules": {
+        "default": [
+          [
+            "copy",
+            "_id"
+          ],
+          [
+            "add",
+            "customerId",
+            "_S.id"
+          ]
+        ]
+      },
+      "type": "dtl"
+    },
+    {
+      "operation": "contactsInformation-list",
+      "payload_property": "value",
+      "replace_entity": false,
+      "response_property": "response_body",
+      "response_status_property": "response_status",
+      "side_effects": false,
+      "system": "{{@ system @}}",
+      "type": "rest"
+    },
+    {
+      "rules": {
+        "default": [
+          [
+            "add",
+            "_id",
+            [
+              "concat",
+              "_S.response_body.contactId",
+              "-",
+              "_S.response_body.relatedId"
+            ]
+          ],
+          [
+            "merge",
+            "_S.response_body"
+          ]
+        ]
+      },
+      "type": "dtl"
+    }
+  ],
+  "type": "pipe"
+}

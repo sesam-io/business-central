@@ -38,6 +38,10 @@
       "method": "PATCH",
       "url": "companies({{@ account_id @}})/contacts({{ entity['$source']['id'] }})"
     },
+    "contactsInformation-list": {
+      "method": "GET",
+      "url": "companies({{@ account_id @}})/customers({{ entity['customerId'] }})/contactsInformation"
+    },
     "countriesregions-delete": {
       "method": "DELETE",
       "url": "companies({{@ account_id @}})/countriesRegions({{ entity['$source']['id'] }})"
