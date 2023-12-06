@@ -13,6 +13,10 @@
       "label": "Contacts",
       "template": "templates/customers.json"
     },
+    "contactsinformation": {
+      "parent": "customers",
+      "template": "templates/contactsinformation.json"
+    },
     "countriesregions": {
       "label": "Countries/Regions",
       "template": "templates/customers.json"
