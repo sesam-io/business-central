@@ -3,9 +3,6 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
-    "@odata.etag": {
-      "type": "string"
-    },
     "accountId": {
       "description": "The id of the account that the sales order line is related to.",
       "type": "string"

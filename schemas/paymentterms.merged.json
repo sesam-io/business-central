@@ -3,13 +3,6 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
-    "$last-modified": {
-      "subtype": "nanoseconds",
-      "type": "string"
-    },
-    "@odata.etag": {
-      "type": "string"
-    },
     "calculateDiscountOnCreditMemos": {
       "description": "Specifies if the discount should be applied to payment term. True indicates a discount will be given, false indicates a discount will not be given.",
       "type": "boolean"

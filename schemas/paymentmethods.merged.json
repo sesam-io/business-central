@@ -3,20 +3,6 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
-    "$last-modified": {
-      "anyOf": [
-        {
-          "subtype": "nanoseconds",
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "@odata.etag": {
-      "type": "string"
-    },
     "code": {
       "description": "The code of the payment method.",
       "type": "string"
