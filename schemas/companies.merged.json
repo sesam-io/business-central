@@ -1,0 +1,39 @@
+{
+  "$id": "/api/pipes/xxxxxx-companies-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "businessProfileId": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "systemCreatedAt": {
+      "type": "string"
+    },
+    "systemCreatedBy": {
+      "type": "string"
+    },
+    "systemModifiedAt": {
+      "type": "string"
+    },
+    "systemModifiedBy": {
+      "type": "string"
+    },
+    "systemVersion": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-companies-collect",
+  "type": "object"
+}

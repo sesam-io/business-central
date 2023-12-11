@@ -3,13 +3,6 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
-    "$last-modified": {
-      "subtype": "nanoseconds",
-      "type": "string"
-    },
-    "@odata.etag": {
-      "type": "string"
-    },
     "address": {
       "additionalProperties": true,
       "description": "Specifies the employee's address. This address will appear on all resource documents for the employee.",
