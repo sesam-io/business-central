@@ -49,6 +49,11 @@
             ],
             [
               "add",
+              "sesam_salesordersId",
+              "_R._S.id"
+            ],
+            [
+              "add",
               "_id",
               "_S.id"
             ]
