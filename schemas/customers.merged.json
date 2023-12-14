@@ -3,6 +3,20 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "$last-modified": {
+      "anyOf": [
+        {
+          "subtype": "nanoseconds",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
     "address": {
       "additionalProperties": true,
       "description": "Specifies the customer's address. This address will appear on all sales documents for the customer.",
@@ -30,9 +44,35 @@
       },
       "type": "object"
     },
+    "addressLine1": {
+      "type": "string"
+    },
+    "addressLine2": {
+      "type": "string"
+    },
+    "balanceDue": {
+      "anyOf": [
+        {
+          "subtype": "decimal",
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
     "blocked": {
       "description": "Specifies which transactions with the customer cannot be posted. It can be ' ', 'Ship', 'Invoice' or 'All'.",
       "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "creditLimit": {
+      "type": "integer"
     },
     "currencyCode": {
       "description": "The default currency code for the customer.",
@@ -74,8 +114,17 @@
       "description": "Specifies the customer's telephone number.",
       "type": "string"
     },
+    "postalCode": {
+      "type": "string"
+    },
+    "salespersonCode": {
+      "type": "string"
+    },
     "shipmentMethodId": {
       "description": "Specifies which shipment method the customer uses.",
+      "type": "string"
+    },
+    "state": {
       "type": "string"
     },
     "taxAreaDisplayName": {

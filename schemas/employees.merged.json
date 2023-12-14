@@ -3,6 +3,13 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
     "address": {
       "additionalProperties": true,
       "description": "Specifies the employee's address. This address will appear on all resource documents for the employee.",
@@ -30,8 +37,20 @@
       },
       "type": "object"
     },
+    "addressLine1": {
+      "type": "string"
+    },
+    "addressLine2": {
+      "type": "string"
+    },
     "birthDate": {
       "description": "Specifies the employee's date of birth.",
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
       "type": "string"
     },
     "displayName": {
@@ -80,6 +99,12 @@
     },
     "phoneNumber": {
       "description": "Specifies the employee's telephone number.",
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "state": {
       "type": "string"
     },
     "statisticsGroupCode": {

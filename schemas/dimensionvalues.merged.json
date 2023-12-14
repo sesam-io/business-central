@@ -3,8 +3,21 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
     "code": {
       "description": "The code of the dimension value.",
+      "type": "string"
+    },
+    "consolidationCode": {
+      "type": "string"
+    },
+    "dimensionId": {
       "type": "string"
     },
     "displayName": {

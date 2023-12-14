@@ -3,6 +3,13 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
     "addressFormat": {
       "description": "Specifies the format of the address that is displayed on external-facing documents. You link an address format to a country/region code so that external-facing documents based on cards or documents with that country/region code use the specified address format.",
       "type": "string"

@@ -2,7 +2,29 @@
   "$id": "/api/pipes/xxxxxx-contactsinformation-collect/entity-types/sink",
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
-  "properties": {},
+  "properties": {
+    "@odata.etag": {
+      "type": "string"
+    },
+    "contactId": {
+      "type": "string"
+    },
+    "contactName": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "contactType": {
+      "type": "string"
+    },
+    "relatedId": {
+      "type": "string"
+    },
+    "relatedType": {
+      "type": "string"
+    }
+  },
   "title": "Pipe sink entity type: xxxxxx-contactsinformation-collect",
   "type": "object"
 }

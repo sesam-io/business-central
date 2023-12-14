@@ -3,6 +3,23 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "$last-modified": {
+      "anyOf": [
+        {
+          "subtype": "nanoseconds",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "baseUnitOfMeasureCode": {
+      "type": "string"
+    },
     "baseUnitOfMeasureId": {
       "description": "Specifies the ID of the unit of measure.",
       "type": "string"
@@ -13,6 +30,15 @@
     },
     "displayName": {
       "description": "Specifies the item's name. This name will appear on all sales documents for the item.",
+      "type": "string"
+    },
+    "displayName2": {
+      "type": "string"
+    },
+    "generalProductPostingGroupCode": {
+      "type": "string"
+    },
+    "generalProductPostingGroupId": {
       "type": "string"
     },
     "gtin": {
@@ -26,6 +52,12 @@
     "inventory": {
       "description": "Specifies how many units, such as pieces, boxes, or cans, of the item are in inventory. Read-Only.",
       "type": "integer"
+    },
+    "inventoryPostingGroupCode": {
+      "type": "string"
+    },
+    "inventoryPostingGroupId": {
+      "type": "string"
     },
     "itemCategoryCode": {
       "description": "The code of the item category in the item.",
