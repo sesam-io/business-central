@@ -71,28 +71,6 @@
     },
     "transform": [
       {
-        "rules": {
-          "default": [
-            [
-              "copy",
-              "*"
-            ],
-            [
-              "if",
-              [
-                "is-null",
-                "_S.id"
-              ],
-              [
-                "remove",
-                "id"
-              ]
-            ]
-          ]
-        },
-        "type": "dtl"
-      },
-      {
         "properties": {
           "operation_delete": "{{@ datatype @}}-delete",
           "operation_insert": "{{@ datatype @}}-insert",
