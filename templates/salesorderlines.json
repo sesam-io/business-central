@@ -105,6 +105,28 @@
               "*"
             ],
             [
+              "if",
+              [
+                "is-null",
+                "_S.id"
+              ],
+              [
+                "remove",
+                "id"
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
               "add",
               "$payload",
               [
