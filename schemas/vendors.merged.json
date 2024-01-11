@@ -3,6 +3,13 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
     "address": {
       "additionalProperties": true,
       "description": "The vendor's address.",
@@ -30,6 +37,12 @@
       },
       "type": "object"
     },
+    "addressLine1": {
+      "type": "string"
+    },
+    "addressLine2": {
+      "type": "string"
+    },
     "balance": {
       "anyOf": [
         {
@@ -44,6 +57,12 @@
     },
     "blocked": {
       "description": "Specifies which transactions with the vendor that cannot be posted. Accepted values are blank, Payment or All",
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
       "type": "string"
     },
     "currencyCode": {
@@ -66,6 +85,9 @@
       "description": "The unique ID of the vendor. Non-editable.",
       "type": "string"
     },
+    "irs1099Code": {
+      "type": "string"
+    },
     "lastModifiedDateTime": {
       "description": "The last datetime the vendor was modified. Read-Only.",
       "type": "string"
@@ -84,6 +106,12 @@
     },
     "phoneNumber": {
       "description": "The vendor's telephone number.",
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "state": {
       "type": "string"
     },
     "taxLiable": {

@@ -3,6 +3,25 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "@odata.etag": {
+      "type": "string"
+    },
+    "billToAddressLine1": {
+      "type": "string"
+    },
+    "billToAddressLine2": {
+      "type": "string"
+    },
+    "billToCity": {
+      "type": "string"
+    },
+    "billToCountry": {
+      "type": "string"
+    },
     "billToCustomerId": {
       "description": "Bill to customer id.",
       "type": "string"
@@ -13,6 +32,12 @@
     },
     "billToName": {
       "description": "Bill to name.",
+      "type": "string"
+    },
+    "billToPostCode": {
+      "type": "string"
+    },
+    "billToState": {
       "type": "string"
     },
     "billingPostalAddress": {
@@ -110,6 +135,9 @@
       "description": "Specifies the sales order's telephone number.",
       "type": "string"
     },
+    "postingDate": {
+      "type": "string"
+    },
     "pricesIncludeTax": {
       "description": "Specifies whether the prices include Tax or not. Read-Only.",
       "type": "boolean"
@@ -120,6 +148,24 @@
     },
     "salesperson": {
       "description": "The salesperson code for the sales order.",
+      "type": "string"
+    },
+    "sellToAddressLine1": {
+      "type": "string"
+    },
+    "sellToAddressLine2": {
+      "type": "string"
+    },
+    "sellToCity": {
+      "type": "string"
+    },
+    "sellToCountry": {
+      "type": "string"
+    },
+    "sellToPostCode": {
+      "type": "string"
+    },
+    "sellToState": {
       "type": "string"
     },
     "sellingPostalAddress": {
@@ -149,12 +195,33 @@
       },
       "type": "object"
     },
+    "shipToAddressLine1": {
+      "type": "string"
+    },
+    "shipToAddressLine2": {
+      "type": "string"
+    },
+    "shipToCity": {
+      "type": "string"
+    },
     "shipToContact": {
       "description": "Ship to contact.",
       "type": "string"
     },
+    "shipToCountry": {
+      "type": "string"
+    },
     "shipToName": {
       "description": "Ship to name.",
+      "type": "string"
+    },
+    "shipToPostCode": {
+      "type": "string"
+    },
+    "shipToState": {
+      "type": "string"
+    },
+    "shipmentMethodId": {
       "type": "string"
     },
     "shippingPostalAddress": {
@@ -183,6 +250,12 @@
         }
       },
       "type": "object"
+    },
+    "shortcutDimension1Code": {
+      "type": "string"
+    },
+    "shortcutDimension2Code": {
+      "type": "string"
     },
     "status": {
       "description": "Specifies the status of the sales order. It can be 'Draft', 'In Review' or 'Open'.",
