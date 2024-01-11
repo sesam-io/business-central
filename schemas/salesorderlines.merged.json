@@ -3,6 +3,9 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "@odata.etag": {
+      "type": "string"
+    },
     "accountId": {
       "description": "The id of the account that the sales order line is related to.",
       "type": "string"
@@ -25,6 +28,9 @@
     },
     "description": {
       "description": "Specifies the description of the sales order line.",
+      "type": "string"
+    },
+    "description2": {
       "type": "string"
     },
     "discountAmount": {
@@ -63,8 +69,17 @@
       "description": "The ID of the item in the sales order line.",
       "type": "string"
     },
+    "itemVariantId": {
+      "type": "string"
+    },
+    "lineObjectNumber": {
+      "type": "string"
+    },
     "lineType": {
       "description": "The type of the sales order line. It can be 'Comment', 'Account', 'Item', 'Resource' Value', 'Fixed Asset' or 'Charge'.",
+      "type": "string"
+    },
+    "locationId": {
       "type": "string"
     },
     "netAmount": {
@@ -134,6 +149,9 @@
           "type": "integer"
         }
       ]
+    },
+    "unitOfMeasureCode": {
+      "type": "string"
     },
     "unitOfMeasureId": {
       "description": "The ID of unit of measure for the sales order line.",
