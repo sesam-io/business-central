@@ -1,61 +1,116 @@
-{
-  "_id": "{{@ system @}}-{{@ datatype @}}-collect",
-  "namespaced_identifiers": false,
-  "pump": {
-    "rescan_cron_expression": "0 * * * ? "
-  },
-  "source": {
-    "dataset": "{{@ system @}}-{{@ parent @}}-all",
-    "type": "dataset"
-  },
-  "transform": [
-    {
-      "rules": {
-        "default": [
-          [
-            "copy",
-            "_id"
-          ],
-          [
-            "add",
-            "customerId",
-            "_S.id"
-          ]
-        ]
-      },
-      "type": "dtl"
+[
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-all",
+    "namespaced_identifiers": false,
+    "pump": {
+      "rescan_cron_expression": "0 * * * ? ",
+      "run_at_startup_if_not_populated": true
     },
-    {
-      "operation": "{{@ datatype @}}-list",
-      "payload_property": "value",
-      "replace_entity": false,
-      "response_property": "response_body",
-      "response_status_property": "response_status",
-      "side_effects": false,
-      "system": "{{@ system @}}",
-      "type": "rest"
+    "source": {
+      "dataset": "{{@ system @}}-{{@ parent @}}-all",
+      "type": "dataset"
     },
-    {
-      "rules": {
-        "default": [
-          [
-            "add",
-            "_id",
+    "transform": [
+      {
+        "rules": {
+          "default": [
             [
-              "concat",
-              "_S.response_body.contactId",
-              "-",
-              "_S.response_body.relatedId"
+              "copy",
+              "_id"
+            ],
+            [
+              "add",
+              "customerId",
+              "_S.id"
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "operation": "{{@ datatype @}}-list",
+        "payload_property": "value",
+        "replace_entity": false,
+        "response_property": "response_body",
+        "response_status_property": "response_status",
+        "side_effects": false,
+        "system": "{{@ system @}}",
+        "type": "rest"
+      },
+      {
+        "rules": {
+          "create_{{@ datatype @}}": [
+            [
+              "add",
+              "_id",
+              [
+                "concat",
+                "_S.contactId",
+                "-",
+                "_S.relatedId"
+              ]
+            ],
+            [
+              "copy",
+              "*"
             ]
           ],
-          [
-            "merge",
-            "_S.response_body"
+          "default": [
+            [
+              "create-child",
+              [
+                "apply",
+                "create_{{@ datatype @}}",
+                "_S.response_body"
+              ]
+            ]
           ]
-        ]
-      },
-      "type": "dtl"
-    }
-  ],
-  "type": "pipe"
-}
+        },
+        "type": "dtl"
+      }
+    ],
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-all2",
+    "namespaced_identifiers": false,
+    "pump": {
+      "run_at_startup_if_not_populated": true
+    },
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-all",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "type": "emit_children"
+      }
+    ],
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+    "namespaced_identifiers": false,
+    "pump": {
+      "run_at_startup_if_not_populated": true
+    },
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-all2",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ]
+          ]
+        },
+        "type": "dtl"
+      }
+    ],
+    "type": "pipe"
+  }
+]
