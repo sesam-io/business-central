@@ -65,6 +65,14 @@
       "label": "Sales Orders",
       "template": "templates/customers.json"
     },
+    "salesquotelines": {
+      "label": "Sales Quote Lines",
+      "template": "templates/salesorderlines.json"
+    },
+    "salesquotes": {
+      "label": "Sales Quotes",
+      "template": "templates/customers.json"
+    },
     "vendors": {
       "label": "Vendors",
       "template": "templates/customers.json"
