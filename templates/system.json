@@ -1,8 +1,6 @@
 {
   "_id": "{{@ system @}}",
-  "json_content_types": [
-    "application/json; odata.metadata=minimal; odata.streaming=true"
-  ],
+  "json_content_types": ["application/json; odata.metadata=minimal; odata.streaming=true"],
   "oauth2": {
     "access_token": "$SECRET(oauth_access_token)",
     "client_id": "$SECRET(oauth_client_id)",
@@ -322,6 +320,58 @@
       "payload-type": "json",
       "url": "companies({{@ account_id @}})/salesOrders({{ entity['$source']['id'] }})"
     },
+
+    "salesquotelines-delete": {
+      "method": "DELETE",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ entity['$source']['documentId'] }})/salesQuoteLines({{ entity['$source']['id'] }})"
+    },
+    "salesquotelines-insert": {
+      "method": "POST",
+      "payload-type": "json",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ entity['$source']['documentId'] }})/salesQuoteLines"
+    },
+    "salesquotelines-list": {
+      "method": "GET",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ properties.salesorder_id }})/salesQuoteLines"
+    },
+    "salesquotelines-lookup": {
+      "method": "GET",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ entity['$source']['documentId'] }})/salesQuoteLines({{ entity['$source']['id'] }})"
+    },
+    "salesquotelines-update": {
+      "headers": {
+        "If-Match": "*"
+      },
+      "method": "PATCH",
+      "payload-type": "json",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ entity['$source']['documentId'] }})/salesQuoteLines({{ entity['$source']['id'] }})"
+    },
+    "salesquotes-delete": {
+      "method": "DELETE",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ entity['$source']['id'] }})"
+    },
+    "salesquotes-insert": {
+      "method": "POST",
+      "payload-type": "json",
+      "url": "companies({{@ account_id @}})/salesQuotes"
+    },
+    "salesquotes-list": {
+      "method": "GET",
+      "url": "companies({{@ account_id @}})/salesQuotes"
+    },
+    "salesquotes-lookup": {
+      "method": "GET",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ entity['$source']['id'] }})"
+    },
+    "salesquotes-update": {
+      "headers": {
+        "If-Match": "*"
+      },
+      "method": "PATCH",
+      "payload-type": "json",
+      "url": "companies({{@ account_id @}})/salesQuotes({{ entity['$source']['id'] }})"
+    },
+
     "vendors-delete": {
       "method": "DELETE",
       "url": "companies({{@ account_id @}})/vendors({{ entity['$source']['id'] }})"
