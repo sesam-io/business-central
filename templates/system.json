@@ -333,7 +333,7 @@
     },
     "salesquotelines-list": {
       "method": "GET",
-      "url": "companies({{@ account_id @}})/salesQuotes({{ properties.salesorder_id }})/salesQuoteLines"
+      "url": "companies({{@ account_id @}})/salesQuotes({{ properties.salesquote_id }})/salesQuoteLines"
     },
     "salesquotelines-lookup": {
       "method": "GET",

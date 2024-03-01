@@ -1,0 +1,188 @@
+[
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-all",
+    "namespaced_identifiers": false,
+    "source": {
+      "dataset": "{{@ system @}}-salesquotes-collect",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "properties",
+              [
+                "dict",
+                "salesquote_id",
+                "_S.id"
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "operation": "{{@ datatype @}}-list",
+        "side_effects": false,
+        "system": "{{@ system @}}",
+        "trace": {
+          "log_request_body_maxsize": 100000,
+          "log_response_body_maxsize": 100000
+        },
+        "type": "rest"
+      }
+    ],
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+    "exclude_completeness": [
+      "{{@ system @}}-{{@ datatype @}}-share"
+    ],
+    "namespaced_identifiers": false,
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-all",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "add-ids": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "_id",
+              "_S.id"
+            ]
+          ],
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "create",
+              [
+                "apply",
+                "add-ids",
+                "_S.response.value"
+              ]
+            ],
+            [
+              "discard"
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "properties": {
+          "primary_key": "id",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-collect-rest",
+        "type": "template"
+      }
+    ],
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-share",
+    "batch_size": 1,
+    "namespaced_identifiers": false,
+    "sink": {
+      "deletion_tracking": false,
+      "set_initial_offset": "onload"
+    },
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-transform",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "if",
+              [
+                "is-null",
+                "_S.id"
+              ],
+              [
+                "remove",
+                "id"
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "$payload",
+              [
+                "apply",
+                "filter-payload",
+                "_S."
+              ]
+            ]
+          ],
+          "filter-payload": [
+            [
+              "copy",
+              "*",
+              [
+                "list",
+                "_*",
+                "$*"
+              ]
+            ],
+            [
+              "remove",
+              "documentId"
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "properties": {
+          "operation_delete": "{{@ datatype @}}-delete",
+          "operation_insert": "{{@ datatype @}}-insert",
+          "operation_lookup": "{{@ datatype @}}-lookup",
+          "operation_update": "{{@ datatype @}}-update",
+          "primary_key": "id",
+          "rest_system": "{{@ system @}}",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-share-rest",
+        "trace": {
+          "log_request_body_maxsize": 100000,
+          "log_response_body_maxsize": 100000
+        },
+        "type": "template"
+      }
+    ],
+    "type": "pipe"
+  }
+]

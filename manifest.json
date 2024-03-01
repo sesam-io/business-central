@@ -67,7 +67,7 @@
     },
     "salesquotelines": {
       "label": "Sales Quote Lines",
-      "template": "templates/salesorderlines.json"
+      "template": "templates/salesquotelines.json"
     },
     "salesquotes": {
       "label": "Sales Quotes",
